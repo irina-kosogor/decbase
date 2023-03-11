@@ -18,3 +18,13 @@
     line-height: 78px;
     color: $color-gray-dark;
 }
+
+@mixin after-stats {
+    content: '';
+    position: absolute;
+    width: 220px;
+    height: 98px;
+    background: url('../../icons/stats_arrow.svg') no-repeat;
+    top: 90px;
+    left: 185px;
+}
