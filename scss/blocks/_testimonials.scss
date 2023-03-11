@@ -1,0 +1,107 @@
+.testimonials {
+    padding: 130px 0 245px 0;
+    display: flex;
+
+    &__header-wrapper {
+        position: relative;
+    }
+
+    &__subtitle {
+        @include main-subtitle;
+        text-align: center;
+    }
+
+    &__title {
+        @include main-title;
+        text-align: center;
+        margin-bottom: 100px;
+    }
+
+    &__btns {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        width: 113px;
+        height: 30px;
+
+    }
+
+    &__btn {
+        display: block;
+        width: 30px;
+        height: 30px;
+        background: $color-white;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+        border-radius: 50%;
+
+        &:hover {
+            background: $color-main-green;
+            color: $color-white;
+        }
+    }
+
+    &__cards {
+        display: flex;
+        gap: 84px;
+    }
+
+    &__card {
+        background: $color-white;
+        box-shadow: 7px 7px 30px 5px rgba(66, 96, 84, 0.15);
+        border-radius: 70px 0px;
+        padding: 40px 20px 20px 100px;
+        position: relative;
+        font-family: 'Open Sans', sans-serif;
+        color: $color-gray;
+
+        &:nth-child(1) {
+            &:before {
+                @include before-testimonials;
+                background: url('../../images/testimonials_louis_saville.png') no-repeat;
+            }
+        }
+
+        &:nth-child(2) {
+            &:before {
+                @include before-testimonials;
+                background: url('../../images/testimonials_rekha_varadwaz.png') no-repeat;
+            }
+        }
+
+        &:after {
+            content: "”";
+            position: absolute;
+            font-family: 'Basic Sans SF', sans-serif;
+            font-weight: 400;
+            font-size: $fs-96;
+            color: $color-brown;
+            top: 10px;
+            right: 35px;
+        }
+    }
+
+    &__card-title {
+        &_name {
+
+            font-weight: 700;
+            font-size: $fs-24;
+            line-height: 33px;
+            color: $color-gray-dark;
+
+        }
+
+        &_position {
+            font-weight: 400;
+            font-size: $fs-16;
+            line-height: 22px;
+        }
+    }
+
+    &__card-description {
+        font-weight: 400;
+        font-size: $fs-18;
+        line-height: 28px;
+    }
+}

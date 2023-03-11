@@ -1,6 +1,16 @@
 .main-stats {
     padding: 87px 0 105px 0;
-    background: $color-white-smoke url('../../images/main_decore.svg') bottom left/212px 150px no-repeat;
+    position: relative;
+    background: $color-white-smoke;
+
+    &:after {
+        content: "";
+        position: absolute;
+        width: 212px;
+        height: 150px;
+        background: url('../../images/main_decore.svg') no-repeat;
+        bottom: -75px;
+    }
 
     &__title {
         @include main-title;
