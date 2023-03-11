@@ -14,10 +14,22 @@
     overflow: hidden;
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: $color-white;
+    z-index: 10;
+}
+
 .logo {
     width: 150px;
-    height: 46px;
+    height: 47px;
     cursor: pointer;
+
+    img {
+        width: 100%;
+    }
 }
 
 .navbar__inner {
@@ -32,7 +44,7 @@
         display: flex;
         justify-content: space-between;
         gap: 44px;
-
+        text-transform: uppercase;
     }
 
     &__item {
@@ -51,7 +63,7 @@
         }
 
         a:hover {
-            color: $color-teal;
+            color: $color-main-green;
         }
 
         a:active {
@@ -68,7 +80,7 @@
             }
 
             a:hover {
-                color: $color-teal;
+                color: $color-main-green;
             }
 
             a:active {
@@ -80,11 +92,9 @@
 
 .authorize {
     &__btn {
+        @include main-button;
         width: 96px;
         height: 31px;
         background: $color-brown-light;
-        border-radius: 15px 0px;
-        color: $color-white;
-        cursor: pointer;
     }
 }
