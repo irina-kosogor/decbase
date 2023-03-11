@@ -5,72 +5,13 @@
 @import 'base/animations';
 
 body {
-    background: url('../images/decore_main_circle_hero.svg') top left no-repeat, url('../images/hero-decore.svg') top right no-repeat, url('../images/decore_main_circle.svg') bottom right no-repeat;
+    background-color: $color-white;
     font-family: 'Poppins', sans-serif;
-    overflow-x: hidden;
 }
 
 .container {
-    max-width: 1140px;
+    max-width: 1320px;
     margin: 0 auto;
-    padding: 0 40px;
 }
-
-@media (max-width: $large-device-breakpoint) {
-    body {
-        font-size: 14px;
-        overflow-x: hidden;
-        background: url('../images/decore_main_circle_hero.svg') top left no-repeat, url('../images/hero-decore.svg') top right/55% no-repeat, url('../images/decore_main_circle.svg') bottom right no-repeat;
-    }    
-    .container {
-        max-width: 960px;
-    }
-}
-
-@media (max-width: $medium-device-breakpoint) {
-    body {
-        font-size: 12px;
-        overflow-x: hidden;
-        background: url('../images/decore_main_circle_hero.svg') top left no-repeat, url('../images/hero-decore.svg') top right/50% no-repeat, url('../images/decore_main_circle.svg') bottom right/40% no-repeat;
-    }    
-    .container {
-        max-width: 720px;
-        padding: 0 25px;
-    }
-}
-
-@media (max-width: $small-device-breakpoint) {
-    body {
-        font-size: 13px;
-        overflow-x: hidden;
-        background: url('../images/decore_main_circle_hero.svg') top left no-repeat, url('../images/hero-decore.svg') top right/55% no-repeat, url('../images/decore_main_circle.svg') bottom right/40% no-repeat;
-    }    
-    .container {
-        padding: 0 30px;
-    }
-}
-
-@media (max-width: $x-small-device-breakpoint) {
-    body {
-        font-size: 12px;
-        overflow-x: hidden;
-        background: url('../images/decore_main_circle_hero.svg') top left no-repeat, url('../images/hero-decore.svg') top right/55% no-repeat, url('../images/decore_main_circle.svg') bottom right/40% no-repeat;
-    }    
-    .container {
-        padding: 0 10px;
-    }
-}
-
 
 @import 'blocks/header';
-@import 'blocks/hero';
-@import 'blocks/plane';
-@import 'blocks/offer';
-@import 'blocks/titles';
-@import 'blocks/top-selling';
-@import 'blocks/steps';
-@import 'blocks/testimonials';
-@import 'blocks/partners';
-@import 'blocks/subscribe';
-@import 'blocks/footer';
-@import 'blocks/mobile-menu';

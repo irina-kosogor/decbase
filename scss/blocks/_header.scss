@@ -1,0 +1,90 @@
+.header {
+    padding-top: 102px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: $fs-16;
+    line-height: 22px;
+    color: $color-gray-dark;
+    overflow: hidden;
+}
+
+.logo {
+    width: 150px;
+    height: 46px;
+    cursor: pointer;
+}
+
+.navbar__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 64px;
+}
+
+.menu {
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        gap: 44px;
+
+    }
+
+    &__item {
+        cursor: pointer;
+
+        &:hover {
+            transition: all .4s linear;
+        }
+
+        a:link {
+            color: $color-gray-dark;
+        }
+
+        a:visited {
+            color: $color-gray-dark;
+        }
+
+        a:hover {
+            color: $color-teal;
+        }
+
+        a:active {
+            color: $color-gray-dark;
+        }
+
+        &_home {
+            a:link {
+                color: $color-gray;
+            }
+
+            a:visited {
+                color: $color-gray;
+            }
+
+            a:hover {
+                color: $color-teal;
+            }
+
+            a:active {
+                color: $color-gray;
+            }
+        }
+    }
+}
+
+.authorize {
+    &__btn {
+        width: 96px;
+        height: 31px;
+        background: $color-brown-light;
+        border-radius: 15px 0px;
+        color: $color-white;
+        cursor: pointer;
+    }
+}

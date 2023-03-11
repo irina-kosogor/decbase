@@ -1,31 +1,24 @@
 // Colors
-
-$black-color: rgb(0, 0, 0);
-$grey-color: rgba(94, 98, 130, 1);
-$dark-grey-color: rgba(33, 40, 50, 1);
-$light-grey-color: rgba(104, 109, 119, 1);
-$white-color: rgba(255, 255, 255, 1);
-$blue-color: rgba(30, 29, 76, 1);
-$dark-blue-color:  rgba(20, 24, 62, 1);
-$red-color: rgba(223, 105, 81, 1);
-$yellow-color: rgba(241, 165, 1, 1);
-$light-yellow-color: rgba(255, 241, 218, 1);
-$light-violet-color: rgba(223, 215, 249, .2);
-$violet-color: rgba(138, 121, 223, 1);
+$color-white: #fff;
+$color-brown-light: #caa892;
+$color-brown-dark: #b0855b;
+$color-gray-dark: #212121;
+$color-black: #111;
+$color-gray: #646464;
+$color-teal: #37806b;
+$color-white-smoke: #f8f8f8;
+$color-silver: #c4c4c4;
 
 
-//Font-size
-$fs-13: 0.8125em;
-$fs-14: 0.875em;
+//Font-sizes
 $fs-16: 1em;
-$fs-17: 1.0625em;
 $fs-18: 1.125em;
 $fs-20: 1.25em;
 $fs-24: 1.5em;
-$fs-33: 2.0625em;
-$fs-44: 2.75em;
+$fs-30: 1.875em;
+$fs-48: 3em;
 $fs-50: 3.125em;
-$fs-84: 5.25em;
+$fs-96: 6em;
 
 // Media breakpoints
 $x-large-device-breakpoint: 1599.98px;
