@@ -1,12 +1,12 @@
-.modern-interior {
-    padding: 92px 0 106px 0;
-    background: url('../../images/modern_interior_decore.svg') bottom left/212px 150px no-repeat;
+.about-us {
+    padding: 143px 0 225px 0;
+    background: url('../../images/about_us_decore.svg') bottom left 253px/212px 150px no-repeat;
 
     &__inner {
         display: flex;
-        gap: 30px;
+        gap: 130px;
         justify-content: space-between;
-        align-items: center
+        align-items: flex-start;
     }
 
     &__content {
@@ -18,25 +18,25 @@
     &__subtitle {
         font-weight: 600;
         font-size: $fs-20;
-        line-height: 27px;
-        margin-bottom: 13px;
+        line-height: 30px;
+        margin-bottom: 60px;
         text-transform: uppercase;
     }
 
     &__title {
         font-family: 'Poppins', sans-serif;
-        font-weight: 600;
-        font-size: $fs-72;
-        line-height: 78px;
+        font-weight: 500;
+        font-size: $fs-48;
+        line-height: 57px;
         color: $color-gray-dark;
-        margin-bottom: 35px;
+        margin-bottom: 5px;
     }
 
     &__description {
         font-weight: 400;
         font-size: $fs-18;
         line-height: 30px;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
     }
 
     &__btn {
@@ -48,8 +48,8 @@
     }
 
     &__image {
-        width: 715px;
-        height: 613px;
+        width: 679px;
+        height: 711px;
         position: relative;
 
         img {
@@ -61,12 +61,12 @@
         &:after {
             content: '';
             position: absolute;
-            width: 715px;
-            height: 613px;
+            width: 679px;
+            height: 711px;
             border: 2px solid $color-brown;
             border-radius: 140px 0px;
-            top: 32px;
-            right: -35px;
+            top: -32px;
+            left: -35px;
             z-index: -1;
         }
     }

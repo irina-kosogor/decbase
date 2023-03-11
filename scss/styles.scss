@@ -7,7 +7,7 @@
 body {
     background-color: $color-white;
     font-family: 'Poppins', sans-serif;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .container {
@@ -17,3 +17,6 @@ body {
 
 @import 'blocks/header';
 @import 'blocks/modern-interior';
+@import 'blocks/services';
+@import 'blocks/about-us';
+@import 'blocks/success-story';

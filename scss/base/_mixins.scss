@@ -1,9 +1,20 @@
 @mixin main-button {
     background: $color-main-green;
     border-radius: 15px 0px;
-    color: $color-white;
-    cursor: pointer;
     font-family: 'Open Sans', sans-serif;
     color: $color-white;
+}
 
+@mixin main-subtitle {
+    font-size: $fs-20;
+    line-height: 28px;
+    color: $color-gray;
+    text-transform: uppercase;
+}
+
+@mixin main-title {
+    font-weight: 500;
+    font-size: $fs-48;
+    line-height: 78px;
+    color: $color-gray-dark;
 }

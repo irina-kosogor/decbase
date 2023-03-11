@@ -1,0 +1,74 @@
+.our-services {
+    padding: 143px 0 254px 0;
+    background: url('../../images/services_decore.svg') top 685px right -10px/245px 254px no-repeat;
+
+    &__subtitle {
+        @include main-subtitle;
+    }
+
+    &__title {
+        @include main-title;
+        margin-bottom: 44px;
+    }
+}
+
+.our-services-header {
+    display: flex;
+    gap: 75px;
+    margin-bottom: 110px;
+
+    &__btn {
+        @include main-button;
+        border-radius: 20px;
+        width: 206px;
+        height: 46px;
+
+        &:hover {
+            background-color: $color-white;
+            color: $color-main-green;
+            border: 5px solid $color-main-green;
+        }
+    }
+}
+
+.our-services-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px;
+}
+
+.our-services-card {
+    position: relative;
+    padding: 30px 24px 5px 106px;
+    max-width: 29%;
+    min-height: 164px;
+    background: #FFFFFF;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
+    border-radius: 60px 0px;
+
+    &:before {
+        position: absolute;
+        content: "";
+        width: 45px;
+        height: 35px;
+        top: 34px;
+        left: 40px;
+        background: url('../../icons/services_interior_design.png') no-repeat;
+    }
+
+    &__title {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+        font-size: $fs-24;
+        color: $color-gray-dark;
+    }
+
+    &__description {
+        font-family: 'Open Sans';
+        font-weight: 400;
+        font-size: $fs-18;
+        line-height: 28px;
+        color: $color-gray;
+    }
+}

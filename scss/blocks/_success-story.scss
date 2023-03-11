@@ -1,12 +1,12 @@
-.modern-interior {
-    padding: 92px 0 106px 0;
-    background: url('../../images/modern_interior_decore.svg') bottom left/212px 150px no-repeat;
+.success-story {
+    padding-bottom: 220px;
+    background: url('../../images/success_story_decore.svg') top 390px right 45px/212px 153px no-repeat;
 
     &__inner {
         display: flex;
         gap: 30px;
         justify-content: space-between;
-        align-items: center
+        align-items: center;
     }
 
     &__content {
@@ -15,19 +15,15 @@
         color: $color-gray;
     }
 
-    &__subtitle {
-        font-weight: 600;
-        font-size: $fs-20;
-        line-height: 27px;
-        margin-bottom: 13px;
-        text-transform: uppercase;
+    &__content-image {
+        margin-bottom: 45px;
     }
 
     &__title {
         font-family: 'Poppins', sans-serif;
-        font-weight: 600;
-        font-size: $fs-72;
-        line-height: 78px;
+        font-weight: 500;
+        font-size: $fs-50;
+        line-height: 65px;
         color: $color-gray-dark;
         margin-bottom: 35px;
     }
@@ -36,7 +32,7 @@
         font-weight: 400;
         font-size: $fs-18;
         line-height: 30px;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
     }
 
     &__btn {
@@ -48,8 +44,8 @@
     }
 
     &__image {
-        width: 715px;
-        height: 613px;
+        width: 679px;
+        height: 711px;
         position: relative;
 
         img {
@@ -61,12 +57,12 @@
         &:after {
             content: '';
             position: absolute;
-            width: 715px;
-            height: 613px;
+            width: 679px;
+            height: 711px;
             border: 2px solid $color-brown;
             border-radius: 140px 0px;
             top: 32px;
-            right: -35px;
+            left: 35px;
             z-index: -1;
         }
     }
