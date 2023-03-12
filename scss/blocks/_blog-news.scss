@@ -1,0 +1,79 @@
+.blog-news {
+    padding: 93px 0 122px 0;
+    background: $color-white-smoke;
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+
+    &:after {
+        content: "";
+        position: absolute;
+        width: 212px;
+        height: 150px;
+        background: url('../../images/secondary_decore.svg') no-repeat;
+        bottom: -75px;
+        right: 0;
+    }
+
+    &__subtitle {
+        @include main-subtitle;
+        text-align: center;
+    }
+
+    &__title {
+        @include main-title;
+        text-align: center;
+        margin-bottom: 100px;
+    }
+
+    &__items {
+        display: flex;
+        gap: 100px;
+    }
+
+    &__item-img {
+        width: 554px;
+        height: 387px;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 60px;
+
+        img {
+            width: 100%;
+            border-radius: 100px 0px;
+            object-fit: cover;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            width: 554px;
+            height: 387px;
+            border: 2px solid $color-brown;
+            border-radius: 100px 0px;
+            top: 17px;
+            left: 15px;
+            z-index: -1;
+        }
+    }
+
+    &__item-title {
+        font-weight: 600;
+        font-size: $fs-30;
+        line-height: 28px;
+        color: $color-gray-dark;
+        margin-bottom: 17px;
+    }
+
+    &__item-description {
+        font-weight: 400;
+        font-size: $fs-18;
+        line-height: 28px;
+        color: $color-gray;
+        margin-bottom: 45px;
+    }
+
+    &__item-btn {
+        @include main-button;
+        padding: 13px 35px;
+    }
+}

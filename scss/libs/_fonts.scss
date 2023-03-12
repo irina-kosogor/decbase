@@ -56,11 +56,11 @@
 
 @font-face {
     font-family: 'Basic Sans SF';
-    src: url('BasicSansSFBold.eot');
-    src: url('BasicSansSFBold.eot?#iefix') format('embedded-opentype'),
-        url('BasicSansSFBold.woff2') format('woff2'),
-        url('BasicSansSFBold.woff') format('woff'),
-        url('BasicSansSFBold.ttf') format('truetype');
+    src: url('../fonts/basic_sans/BasicSansSFBold.eot');
+    src: url('../fonts/basic_sans/BasicSansSFBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/basic_sans/BasicSansSFBold.woff2') format('woff2'),
+        url('../fonts/basic_sans/BasicSansSFBold.woff') format('woff'),
+        url('../fonts/basic_sans/BasicSansSFBold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
 }
