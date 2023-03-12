@@ -1,0 +1,60 @@
+.sign-up {
+    padding: 80px 0 92px 0;
+    font-family: 'Open Sans', sans-serif;
+
+    &__title {
+        @include main-title;
+        text-align: center;
+    }
+
+    hr {
+        width: 460px;
+        height: 0;
+        border-top: 1px solid $color-silver;
+        margin-bottom: 40px;
+    }
+
+    &__description {
+        margin: 0 auto;
+        width: 50%;
+        font-weight: 400;
+        font-size: $fs-18;
+        line-height: 28px;
+        text-align: center;
+        color: $color-gray;
+        margin-bottom: 36px;
+    }
+
+    .sign-up-form {
+        width: 60%;
+        margin: 0 auto;
+
+        &__wrapper {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 58px;
+        }
+
+        &__name,
+        &__surname,
+        &__email {
+            width: 317px;
+            height: 48px;
+            background: $color-gray-light;
+            border-radius: 20px 0px;
+            padding: 18px 35px;
+        }
+
+        &__email {
+            width: 100%;
+            margin-bottom: 92px;
+        }
+
+        &__subscribe {
+            @include main-button;
+            display: block;
+            margin: 0 auto;
+            padding: 16px 48px;
+        }
+    }
+}
