@@ -1,6 +1,7 @@
 import { stickNavbarToTop, showProgress } from "./modules/header";
 // import { createSlider } from "./modules/shop";
-import { setCurrentYear} from "./modules/footer-year"
+import { setCurrentYear } from "./modules/footer-year";
+import { closeWindowAfterTimeout } from "./modules/modal-close-window";
 
 // window.addEventListener("load", function () {
 // 	document.body.style.overflow = "hidden";
@@ -13,10 +14,10 @@ import { setCurrentYear} from "./modules/footer-year"
 window.addEventListener("DOMContentLoaded", () => {
 	// createSlider();
 	setCurrentYear();
+	closeWindowAfterTimeout();
 });
 
 window.addEventListener("scroll", () => {
 	stickNavbarToTop();
 	showProgress();
 });
-
