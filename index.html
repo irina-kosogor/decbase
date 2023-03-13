@@ -5,8 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.min.css">
-    <title>DECBASE</title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/icons/favicon/site.webmanifest">
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/styles.min.css">
+    <title>Decbase</title>
 </head>
 
 <body>
@@ -20,12 +26,12 @@
                     <nav class="menu">
                         <ul class="menu__items">
                             <li class="menu__item menu__item_home"><a href="#">HOME</a></li>
-                            <li class="menu__item"><a href="#">PROJECT</a></li>
-                            <li class="menu__item"><a href="#">SERVICES</a></li>
-                            <li class="menu__item"><a href="#">ABOUT</a></li>
-                            <li class="menu__item"><a href="#">BLOG</a></li>
-                            <li class="menu__item"><a href="#">SHOP</a></li>
-                            <li class="menu__item"><a href="#">CONTACT</a></li>
+                            <li class="menu__item"><a href="#project">PROJECT</a></li>
+                            <li class="menu__item"><a href="#services">SERVICES</a></li>
+                            <li class="menu__item"><a href="#about">ABOUT</a></li>
+                            <li class="menu__item"><a href="#blog">BLOG</a></li>
+                            <li class="menu__item"><a href="#shop">SHOP</a></li>
+                            <li class="menu__item"><a href="#contact">CONTACT</a></li>
                         </ul>
                     </nav>
                     <div class="authorize">
@@ -34,16 +40,20 @@
                 </div>
             </div>
         </div>
+        <div class="header-progress-container">
+            <div class="header-progress-bar" id="progress-bar""></div>
+        </div>
     </div>
 
-    <div class="main">
-        <section class="modern-interior">
+    <main class="main-content">
+        <section class="modern-interior" id="project">
             <div class="container">
                 <div class="modern-interior__inner">
                     <div class="modern-interior__content">
                         <h2 class="modern-interior__subtitle">MODERN INTERIOR</h2>
                         <h1 class="modern-interior__title">Create Your Interior Design.</h1>
-                        <p class="modern-interior__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        <p class="modern-interior__description">Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit,
                             sed do eiusmod
                             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                             veniam, quis nostrud exercitation.</p>
@@ -58,7 +68,7 @@
             </div>
         </section>
 
-        <section class="our-services">
+        <section class="our-services" id="services">
             <div class="container">
                 <h3 class="our-services__subtitle">WHAT WE DO</h3>
                 <h2 class="our-services__title">Our Service</h2>
@@ -72,27 +82,32 @@
                     <div class="our-services-cards">
                         <div class="our-services-card">
                             <div class="our-services-card__title">Interior Design1</div>
-                            <div class="our-services-card__description">Lorem ipsum dolor amet consectetur adipiscing
+                            <div class="our-services-card__description">Lorem ipsum dolor amet consectetur
+                                adipiscing
                                 elit sed eiusmod tempor incididunt ut labore.</div>
                         </div>
                         <div class="our-services-card">
                             <div class="our-services-card__title">Architecture 1</div>
-                            <div class="our-services-card__description">Lorem ipsum dolor amet consectetur adipiscing
+                            <div class="our-services-card__description">Lorem ipsum dolor amet consectetur
+                                adipiscing
                                 elit sed eiusmod tempor incididunt ut labore.</div>
                         </div>
                         <div class="our-services-card">
                             <div class="our-services-card__title">Planning 1</div>
-                            <div class="our-services-card__description">Lorem ipsum dolor amet consectetur adipiscing
+                            <div class="our-services-card__description">Lorem ipsum dolor amet consectetur
+                                adipiscing
                                 elit sed eiusmod tempor incididunt ut labore.</div>
                         </div>
                         <div class="our-services-card">
                             <div class="our-services-card__title">Planning 1</div>
-                            <div class="our-services-card__description">Lorem ipsum dolor amet consectetur adipiscing
+                            <div class="our-services-card__description">Lorem ipsum dolor amet consectetur
+                                adipiscing
                                 elit sed eiusmod tempor incididunt ut labore.</div>
                         </div>
                         <div class="our-services-card">
                             <div class="our-services-card__title">Planning 1</div>
-                            <div class="our-services-card__description">Lorem ipsum dolor amet consectetur adipiscing
+                            <div class="our-services-card__description">Lorem ipsum dolor amet consectetur
+                                adipiscing
                                 elit sed eiusmod tempor incididunt ut labore.</div>
                         </div>
                     </div>
@@ -100,7 +115,7 @@
             </div>
         </section>
 
-        <section class="about-us">
+        <section class="about-us" id="about">
             <div class="container">
                 <div class="about-us__inner">
                     <div class="about-us__image">
@@ -110,7 +125,8 @@
                         <h2 class="about-us__subtitle">ABOUT US</h2>
                         <h3 class="about-us__title">Interioris The Will
                             of An Epoch Mextreo</h3>
-                        <p class="about-us__description">There are many variations of passages of Lorem Ipsum available,
+                        <p class="about-us__description">There are many variations of passages of Lorem Ipsum
+                            available,
                             but the majority have suffered alteration in some form injected
                             humour, or randomised words which don't look even slightly
                             believable.If you are going to use a passage of Lorem Ipsum,
@@ -130,7 +146,8 @@
             <div class="container">
                 <div class="success-story__inner">
                     <div class="success-story__content">
-                        <img src="images/20_years_img.png" alt="20-years-image" class="success-story__content-image">
+                        <img src="images/20_years_img.png" alt="20-years-image"
+                            class="success-story__content-image">
                         <h2 class="success-story__title">Years Of Successful
                             Working <br> The Market</h2>
                         <button class="success-story__btn">
@@ -209,7 +226,7 @@
             </div>
         </section>
 
-        <section class="blog-news">
+        <section class="blog-news" id="blog">
             <div class="container">
                 <div class="blog-news__subtitle">LETEST NEWS</div>
                 <div class="blog-news__title">From Our Blog</div>
@@ -219,7 +236,8 @@
                             <img src="images/blog_news_img1.jpg" alt="blog-news-img">
                         </div>
                         <h3 class="blog-news__item-title">2020 Interior Design Trends</h3>
-                        <div class="blog-news__item-description">Lorem ipsum dolor sit amet, consectetur adipiscing
+                        <div class="blog-news__item-description">Lorem ipsum dolor sit amet, consectetur
+                            adipiscing
                             elit, sed do eiusmod
                             incididunt ut labore et dolore magna aliqua.</div>
                         <button class="blog-news__item-btn">CONTINUE READING....</button>
@@ -229,7 +247,8 @@
                             <img src="images/blog_news_img2.jpg" alt="blog-news-img">
                         </div>
                         <div class="blog-news__item-title">28 Notable Product at ARC Interior Design</div>
-                        <div class="blog-news__item-description">Lorem ipsum dolor sit amet, consectetur adipiscing
+                        <div class="blog-news__item-description">Lorem ipsum dolor sit amet, consectetur
+                            adipiscing
                             elit, sed do eiusmod
                             incididunt ut labore et dolore magna aliqua.</div>
                         <button class="blog-news__item-btn">CONTINUE READING....</button>
@@ -238,11 +257,24 @@
             </div>
         </section>
 
-        <section class="sign-up">
+        <section class="shop" id="shop">
+            <div class="container">
+                <h3 class="shop__subtitle">Take a look at our best works and choose the one for you!</h3>
+                <h2 class="shop__title">Shop</h2>
+                <div class="shop__content-wrapper">
+                    <button class="shop__btn shop__btn_previous">&#60;</button>
+                    <div class="shop__slider"></div>
+                    <button class="shop__btn shop__btn_next">&#62;</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="sign-up" id="contact">
             <div class="container">
                 <h3 class="sign-up__title">DON’T FORGET TO SIGN UP</h3>
                 <hr>
-                <div class="sign-up__description">Find out early about all upcoming promotions and new product releases
+                <div class="sign-up__description">Find out early about all upcoming promotions and new product
+                    releases
                     with our newsletter.</div>
                 <form action="#" id="sign-up-form" class="sign-up-form">
                     <div class="sign-up-form__wrapper">
@@ -253,18 +285,19 @@
                     </div>
                     <input id="sign-up-email" class="sign-up-form__email" type="email"
                         placeholder="Enter your e-mail.....">
-                    <input id="sign-up-subscribe" class="sign-up-form__subscribe" type="submit" value="SUBSCRIBE">
+                    <input id="sign-up-subscribe" class="sign-up-form__subscribe" type="submit"
+                        value="SUBSCRIBE">
                 </form>
             </div>
         </section>
-    </div>
+    </main>
 
     <footer class="footer">
         <div class="container">
             <div class="footer__wrapper">
                 <div class="footer-brand">
                     <div class="footer-brand__logo">
-                        <img src="images/logo.png" alt="logo-img">
+                        <a href="#"><img src="images/logo.png" alt="logo-img"></a>
                     </div>
                     <div class="footer-brand__moto">But i must explain to you all this mistaken
                         idea of dencouncing pleasure.</div>
@@ -298,7 +331,8 @@
                             Street Front USA</div>
                         <div class="footer-contacts__list-item"><a
                                 href="mailto:brandoxide@gmail.com">brandoxide@gmail.com</a></div>
-                        <div class="footer-contacts__list-item"><a href="tel:002568423591">002-568423591</a></div>
+                        <div class="footer-contacts__list-item"><a href="tel:002568423591">002-568423591</a>
+                        </div>
                     </div>
                 </div>
                 <div class="footer-social">
@@ -321,10 +355,22 @@
                     </div>
                 </div>
             </div>
-            <p class="copyright">Copyright @ 2020 <span>Brandoxide.all</span> right reserved.</p>
+            <p class="copyright">Copyright @ <span id="footer-year"></span> <span>Brandoxide.all</span> right reserved.</p>
         </div>
         <hr>
     </footer>
+
+    <!-- <div class="loader">
+        <span>L</span>
+        <span>O</span>
+        <span>A</span>
+        <span>D</span>
+        <span>I</span>
+        <span>N</span>
+        <span>G</span>
+    </div> -->
+
+    <script src="/JS/bundle.js"></script>
 </body>
 
 </html>

@@ -1,3 +1,10 @@
+@mixin menu-item-hover {
+    border: 5px solid $color-main-green;
+    border-radius: 20px;
+    color: $color-main-green;
+    padding: 10px;
+}
+
 @mixin main-button {
     background: $color-main-green;
     border-radius: 15px 0px;
