@@ -3,6 +3,7 @@ import { stickNavbarToTop, showProgress } from "./modules/header";
 import { setCurrentYear } from "./modules/footer-year";
 import { closeWindowAfterTimeout } from "./modules/modal-close-window";
 import { showCards } from "./modules/testimonials-slider";
+import { formValidation } from "./modules/form-validation";
 
 // window.addEventListener("load", function () {
 // 	document.body.style.overflow = "hidden";
@@ -17,6 +18,7 @@ window.addEventListener("DOMContentLoaded", () => {
 	setCurrentYear();
 	closeWindowAfterTimeout();
 	showCards();
+	formValidation();
 });
 
 window.addEventListener("scroll", () => {

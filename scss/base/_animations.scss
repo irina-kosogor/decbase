@@ -1,19 +1,29 @@
 @keyframes flip {
-    35% {
-        transform: rotateX(360deg);
-    }
+  35% {
+    transform: rotateX(360deg);
+  }
 
-    100% {
-        transform: rotatex(360deg);
-    }
+  100% {
+    transform: rotatex(360deg);
+  }
 }
 
 @keyframes fadeIn {
-    from {
-      opacity: 10%;
-    }
-  
-    to {
-      opacity: 100%;
-    }
+  from {
+    opacity: 10%;
   }
+
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+

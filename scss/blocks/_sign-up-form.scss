@@ -39,16 +39,17 @@
     .sign-up-form {
         width: 60%;
         margin: 0 auto;
+        position: relative;
 
         &__wrapper {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 58px;
         }
 
         &__name,
         &__surname,
         &__email {
+            position: relative;
             width: 317px;
             height: 48px;
             background: $color-gray-light;
@@ -56,8 +57,24 @@
             padding: 18px 35px;
         }
 
+        &__name_error {
+            border: 1px solid $color-red;
+        }
+
+        &__error {
+            text-align: center;
+            position: relative;
+            top: 25px;
+            color: $color-red;
+        }
+
+        &__error-email {
+            top: -45px;
+        }
+
         &__email {
             width: 100%;
+            margin-top: 58px;
             margin-bottom: 92px;
         }
 
@@ -70,3 +87,20 @@
         }
     }
 }
+
+.greeting {
+    position: absolute;
+    top: 150px;
+    height: 130px;
+    color: $color-main-green;
+    border-radius: 40px;
+    padding: 20px 40px;
+    font-size: 20px;
+    text-align: center;
+    animation: scale-up-center 2s linear both;
+    span {
+        font-weight: 700;
+        color: $color-red;
+    }
+}
+
