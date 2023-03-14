@@ -13,7 +13,7 @@ export const closeWindowAfterTimeout = () => {
 		document.body.style.overflow = "hidden";
 		yesButton.addEventListener("click", closeModal);
 		noButton.addEventListener("click", closeWindow);
-		timeoutId = setTimeout(closeWindow, 300000);
+		timeoutId = setTimeout(closeWindow, 30000);
 	}
 
 	function closeModal() {

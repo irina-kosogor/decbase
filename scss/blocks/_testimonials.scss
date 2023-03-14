@@ -44,31 +44,20 @@
 
     &__cards {
         display: flex;
-        gap: 84px;
+        justify-content: space-between;
+        gap: 176px;
     }
 
     &__card {
+        min-height: 226px;
+        width: 570px;
         background: $color-white;
         box-shadow: 7px 7px 30px 5px rgba(66, 96, 84, 0.15);
         border-radius: 70px 0px;
-        padding: 40px 20px 20px 100px;
+        padding: 50px 20px 30px 100px;
         position: relative;
         font-family: 'Open Sans', sans-serif;
         color: $color-gray;
-
-        &:nth-child(1) {
-            &:before {
-                @include before-testimonials;
-                background: url('../../images/testimonials_louis_saville.png') no-repeat;
-            }
-        }
-
-        &:nth-child(2) {
-            &:before {
-                @include before-testimonials;
-                background: url('../../images/testimonials_rekha_varadwaz.png') no-repeat;
-            }
-        }
 
         &:after {
             content: "”";
@@ -78,7 +67,20 @@
             font-size: $fs-96;
             color: $color-brown;
             top: 10px;
-            right: 35px;
+            right: 25px;
+        }
+    }
+
+    &__card-img {
+        position: absolute;
+        width: 130px;
+        height: 131px;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -65px;
+        img {
+            width: 100%;
+            border-radius: 35px 0px;
         }
     }
 
