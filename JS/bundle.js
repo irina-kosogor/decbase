@@ -344,6 +344,122 @@ const closeWindowAfterTimeout = () => {
 
 /***/ }),
 
+/***/ "./js/modules/services.js":
+/*!********************************!*\
+  !*** ./js/modules/services.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "services": () => (/* binding */ services)
+/* harmony export */ });
+const services = async () => {
+	const allBtn = document.querySelector("#allBtn");
+	const interiorBtn = document.querySelector("#interiorBtn");
+	const architectureBtn = document.querySelector("#architectureBtn");
+	const planningBtn = document.querySelector("#planningBtn");
+	const cardContainer = document.querySelector(".our-services-cards");
+
+    const design = await fetch("JS/json/design.json")
+		.then((response) => response.json())
+		.then((data) => {
+            return data.projects.sort((a, b) => new Date(b.created_at).getTime() -  new Date(a.created_at).getTime());
+		})
+		.catch((error) => {
+			console.error(error);
+		});
+
+	const architecture = await fetch("JS/json/architecture.json")
+		.then((response) => response.json())
+		.then((data) => {
+            return data.projects.sort((a, b) => new Date(b.created_at).getTime() -  new Date(a.created_at).getTime());
+		})
+		.catch((error) => {
+			console.error(error);
+		});
+
+	const planning = await fetch("JS/json/planning.json")
+		.then((response) => response.json())
+		.then((data) => {
+			return data.projects.sort((a, b) => new Date(b.created_at).getTime() -  new Date(a.created_at).getTime());
+		})
+		.catch((error) => {
+			console.error(error);
+		});
+
+    const projects = [...design, ...architecture, ...planning];
+
+    handleFilterClick("all");
+
+	function displayProjects(projects, n) {
+		cardContainer.innerHTML = "";
+		for (let i = 0; i < n; i++) {
+			const project = projects[i];
+			const card = document.createElement("div");
+			card.classList.add("our-services-card");
+            if (project.category === "architecture") {
+                card.classList.add("our-services-card_architecture"); 
+            }
+            if (project.category === "planning") {
+                card.classList.add("our-services-card_planning"); 
+            }
+			card.innerHTML = `
+                <div class="our-services-card__title">${project.title}</div>
+                <div class="our-services-card__description">${project.description}</div>
+    `;
+			cardContainer.appendChild(card);
+		}
+	}
+
+    function handleFilterClick(category) {
+        let filteredProjects;
+        if (category === "all") {
+            filteredProjects = [design[0], architecture[0], planning[0]];
+            displayProjects(filteredProjects, 3);
+        } else {
+            filteredProjects = projects.filter(
+                (project) => project.category === category
+            );
+            displayProjects(filteredProjects, 5);
+        }
+	}
+
+    function removeActiveClass() {
+        allBtn.classList.remove("active");
+		interiorBtn.classList.remove("active");
+		architectureBtn.classList.remove("active");
+		planningBtn.classList.remove("active");
+    }
+
+    allBtn.addEventListener("click", () => {
+        removeActiveClass()
+		allBtn.classList.add("active");
+		handleFilterClick("all");
+	});
+
+	interiorBtn.addEventListener("click", () => {
+        removeActiveClass()
+		interiorBtn.classList.toggle("active");
+		handleFilterClick("interior-design");
+	});
+    
+	architectureBtn.addEventListener("click", () => {
+        removeActiveClass()
+		architectureBtn.classList.toggle("active");
+		handleFilterClick("architecture");
+	});
+    
+	planningBtn.addEventListener("click", () => {
+        removeActiveClass()
+		planningBtn.classList.toggle("active");
+		handleFilterClick("planning");
+	});
+};
+
+
+/***/ }),
+
 /***/ "./js/modules/testimonials-slider.js":
 /*!*******************************************!*\
   !*** ./js/modules/testimonials-slider.js ***!
@@ -1446,8 +1562,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_testimonials_slider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/testimonials-slider */ "./js/modules/testimonials-slider.js");
 /* harmony import */ var _modules_form_validation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/form-validation */ "./js/modules/form-validation.js");
 /* harmony import */ var _modules_blog_news__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/blog-news */ "./js/modules/blog-news.js");
+/* harmony import */ var _modules_services__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/services */ "./js/modules/services.js");
 
 // import { createSlider } from "./modules/shop";
+
 
 
 
@@ -1469,12 +1587,14 @@ window.addEventListener("DOMContentLoaded", () => {
 	(0,_modules_testimonials_slider__WEBPACK_IMPORTED_MODULE_3__.showCards)();
 	(0,_modules_form_validation__WEBPACK_IMPORTED_MODULE_4__.formValidation)();
 	(0,_modules_blog_news__WEBPACK_IMPORTED_MODULE_5__.blogNews)();
+	(0,_modules_services__WEBPACK_IMPORTED_MODULE_6__.services)();
 });
 
 window.addEventListener("scroll", () => {
 	(0,_modules_header__WEBPACK_IMPORTED_MODULE_0__.stickNavbarToTop)();
 	(0,_modules_header__WEBPACK_IMPORTED_MODULE_0__.showProgress)();
 });
+
 
 })();
 

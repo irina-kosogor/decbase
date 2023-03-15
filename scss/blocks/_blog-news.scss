@@ -43,6 +43,7 @@
         position: absolute;
         background: $color-white-smoke;
         &:hover {
+            transition: all 0.4s linear;
             padding: 10px;
             border-radius: 10px;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
@@ -89,10 +90,10 @@
     }
 
     &__item-title {
-        height: 70px;
+        height: 90px;
         font-weight: 600;
         font-size: $fs-30;
-        line-height: 28px;
+        line-height: 30px;
         color: $color-gray-dark;
         margin-bottom: 17px;
     }

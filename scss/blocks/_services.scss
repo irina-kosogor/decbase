@@ -22,13 +22,13 @@
         border-radius: 20px;
         width: 206px;
         height: 46px;
-
-        &:hover {
-            background-color: $color-white;
-            color: $color-main-green;
-            border: 5px solid $color-main-green;
-        }
     }
+}
+
+.active {
+    background-color: $color-white;
+    color: $color-main-green;
+    border: 5px solid $color-main-green;
 }
 
 .our-services-cards {
@@ -40,7 +40,7 @@
 
 .our-services-card {
     position: relative;
-    padding: 30px 24px 5px 106px;
+    padding: 30px 24px 15px 106px;
     max-width: 29%;
     min-height: 164px;
     background: #FFFFFF;
@@ -70,5 +70,24 @@
         font-size: $fs-18;
         line-height: 28px;
         color: $color-gray;
+    }
+
+    &_architecture {
+        background: $color-brown-light;
+        &:before {
+            background: url('../../icons/services_architecture.png') no-repeat;
+        }
+        .our-services-card__title {
+            color: $color-white;
+        }
+        .our-services-card__description {
+            color: $color-white;
+        }
+    }
+
+    &_planning {
+        &:before {
+            background: url('../../icons/services_planning.png') no-repeat;
+        }
     }
 }

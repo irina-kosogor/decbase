@@ -5,6 +5,7 @@ import { closeWindowAfterTimeout } from "./modules/modal-close-window";
 import { showCards } from "./modules/testimonials-slider";
 import { formValidation } from "./modules/form-validation";
 import { blogNews } from "./modules/blog-news";
+import { services } from "./modules/services";
 
 // window.addEventListener("load", function () {
 // 	document.body.style.overflow = "hidden";
@@ -21,9 +22,11 @@ window.addEventListener("DOMContentLoaded", () => {
 	showCards();
 	formValidation();
 	blogNews();
+	services();
 });
 
 window.addEventListener("scroll", () => {
 	stickNavbarToTop();
 	showProgress();
 });
+

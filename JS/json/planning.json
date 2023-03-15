@@ -1,0 +1,40 @@
+{
+    "projects": [
+      {
+        "title": "Planning 1",
+        "description": "Lorem ipsum dolor amet consectetur adipiscing elit sed eiusmod tempor incididunt ut labore.",
+        "category": "planning",
+        "created_at": "2020-06-17T11:05:36Z"
+      },
+      {
+        "title": "Planning 2",
+        "description": "Lorem ipsum dolor amet consectetur adipiscing elit sed eiusmod tempor incididunt ut labore.",
+        "category": "planning",
+        "created_at": "2020-04-17T11:05:36Z"
+      },
+      {
+        "title": "Planning 3",
+        "description": "Lorem ipsum dolor amet consectetur adipiscing elit sed eiusmod tempor incididunt ut labore.",
+        "category": "planning",
+        "created_at": "2020-02-17T11:05:36Z"
+      },
+      {
+        "title": "Planning 4",
+        "description": "Lorem ipsum dolor amet consectetur adipiscing elit sed eiusmod tempor incididunt ut labore.",
+        "category": "planning",
+        "created_at": "2020-06-07T11:05:36Z"
+      },
+      {
+        "title": "Planning 5",
+        "description": "Lorem ipsum dolor amet consectetur adipiscing elit sed eiusmod tempor incididunt ut labore.",
+        "category": "planning",
+        "created_at": "2020-09-11T11:05:36Z"
+      },
+      {
+        "title": "Planning 6",
+        "description": "Lorem ipsum dolor amet consectetur adipiscing elit sed eiusmod tempor incididunt ut labore.",
+        "category": "planning",
+        "created_at": "2021-12-17T11:05:36Z"
+      }
+    ]
+  }
