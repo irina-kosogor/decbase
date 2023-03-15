@@ -2,6 +2,66 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./js/modules/blog-news.js":
+/*!*********************************!*\
+  !*** ./js/modules/blog-news.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "blogNews": () => (/* binding */ blogNews)
+/* harmony export */ });
+const blogNews = () => {
+	const latestNewsSection = document.querySelector("#blog");
+	const latestNewContainer = document.querySelector(".blog-news__items");
+	const count = 4;
+	const keyWord = "interior design + modern interior + architecture";
+	const apiKey = "4e50d70223c24aeb8dc778b18d4683d1";
+	const newsApi = `https://newsapi.org/v2/everything?pageSize=${count}&q=${keyWord}&apiKey=${apiKey}`;
+
+	async function getNews() {
+		try {
+			const response = await fetch(newsApi);
+			const data = await response.json();
+			return data;
+		} catch (error) {
+			console.log(error);
+		}
+	}
+
+	async function createNewsCards() {
+		const news = await getNews();
+		news?.articles.forEach((article) => {
+			const { urlToImage, title, description } = article;
+			const newsCard = document.createElement("div");
+			newsCard.classList.add("blog-news__item");
+			newsCard.innerHTML = `
+				<div class="blog-news__item-img">
+					<img src="${urlToImage}" alt="blog-news-img">
+				</div>
+				<h3 class="blog-news__item-title">${title}</h3>
+				<div class="blog-news__item-description">${description}</div>
+				<button class="blog-news__item-btn">CONTINUE READING....</button>
+				`;
+			latestNewContainer.append(newsCard);
+		});
+	}
+
+	function createCardsOnScroll() {
+		const rect = latestNewsSection.getBoundingClientRect();
+		if (rect.top < window.innerHeight) {
+			createNewsCards();
+			window.removeEventListener("scroll", createCardsOnScroll);
+		}
+	}
+
+	window.addEventListener("scroll", createCardsOnScroll);
+};
+
+
+/***/ }),
+
 /***/ "./js/modules/footer-year.js":
 /*!***********************************!*\
   !*** ./js/modules/footer-year.js ***!
@@ -1352,8 +1412,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_modal_close_window__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/modal-close-window */ "./js/modules/modal-close-window.js");
 /* harmony import */ var _modules_testimonials_slider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/testimonials-slider */ "./js/modules/testimonials-slider.js");
 /* harmony import */ var _modules_form_validation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/form-validation */ "./js/modules/form-validation.js");
+/* harmony import */ var _modules_blog_news__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/blog-news */ "./js/modules/blog-news.js");
 
 // import { createSlider } from "./modules/shop";
+
 
 
 
@@ -1373,6 +1435,7 @@ window.addEventListener("DOMContentLoaded", () => {
 	(0,_modules_modal_close_window__WEBPACK_IMPORTED_MODULE_2__.closeWindowAfterTimeout)();
 	(0,_modules_testimonials_slider__WEBPACK_IMPORTED_MODULE_3__.showCards)();
 	(0,_modules_form_validation__WEBPACK_IMPORTED_MODULE_4__.formValidation)();
+	(0,_modules_blog_news__WEBPACK_IMPORTED_MODULE_5__.blogNews)();
 });
 
 window.addEventListener("scroll", () => {
