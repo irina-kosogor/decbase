@@ -1,5 +1,5 @@
 .our-services {
-    padding: 143px 0 254px 0;
+    padding: 143px 0 154px 0;
     background: url('../../images/services_decore.svg') top 685px right -10px/245px 254px no-repeat;
 
     &__subtitle {
@@ -46,6 +46,7 @@
     background: #FFFFFF;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
     border-radius: 60px 0px;
+    animation: fadeIn 0.5s ease-in-out;
 
     &:before {
         position: absolute;

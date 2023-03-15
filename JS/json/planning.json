@@ -1,40 +1,34 @@
 {
     "projects": [
       {
-        "title": "Planning 1",
-        "description": "Lorem ipsum dolor amet consectetur adipiscing elit sed eiusmod tempor incididunt ut labore.",
+        "title": "Space Planning",
+        "description": "Graphic study showing arrangement of spaces, room layouts, and activities making up a floor plan.",
         "category": "planning",
-        "created_at": "2020-06-17T11:05:36Z"
+        "created_at": "2023-03-17T11:05:36Z"
       },
       {
-        "title": "Planning 2",
-        "description": "Lorem ipsum dolor amet consectetur adipiscing elit sed eiusmod tempor incididunt ut labore.",
+        "title": "Site Planning",
+        "description": "Development of site plan options showing boundary lines, potential development boundaries, building location(s).",
         "category": "planning",
-        "created_at": "2020-04-17T11:05:36Z"
+        "created_at": "2023-03-05T11:05:36Z"
       },
       {
-        "title": "Planning 3",
-        "description": "Lorem ipsum dolor amet consectetur adipiscing elit sed eiusmod tempor incididunt ut labore.",
+        "title": "Construction Planning",
+        "description": "The developer may want to establish a project budget in the Pre-Design Architecture phase.",
         "category": "planning",
-        "created_at": "2020-02-17T11:05:36Z"
+        "created_at": "2023-02-17T11:05:36Z"
       },
       {
-        "title": "Planning 4",
-        "description": "Lorem ipsum dolor amet consectetur adipiscing elit sed eiusmod tempor incididunt ut labore.",
+        "title": "Bidding Planning",
+        "description": "At this time the owner prepares to select the contractor for the job and sign contracts to proceed with construction.",
         "category": "planning",
-        "created_at": "2020-06-07T11:05:36Z"
+        "created_at": "2023-02-01T11:05:36Z"
       },
       {
-        "title": "Planning 5",
-        "description": "Lorem ipsum dolor amet consectetur adipiscing elit sed eiusmod tempor incididunt ut labore.",
+        "title": "Acception Planning",
+        "description": " The architect will be available to answer questions and provide additional information to issues that arise.",
         "category": "planning",
-        "created_at": "2020-09-11T11:05:36Z"
-      },
-      {
-        "title": "Planning 6",
-        "description": "Lorem ipsum dolor amet consectetur adipiscing elit sed eiusmod tempor incididunt ut labore.",
-        "category": "planning",
-        "created_at": "2021-12-17T11:05:36Z"
+        "created_at": "2023-01-11T11:05:36Z"
       }
     ]
   }

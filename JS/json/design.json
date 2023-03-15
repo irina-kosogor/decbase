@@ -1,40 +1,34 @@
 {
     "projects": [
       {
-        "title": "Interior Design1",
-        "description": "Lorem ipsum dolor amet consectetur adipiscing elit sed eiusmod tempor incididunt ut labore.",
+        "title": "Discover what fits your vision",
+        "description": "Pry projects open to discover what fits your vision, solves your challenges, & boosts your profits.",
         "category": "interior-design",
-        "created_at": "2020-04-17T11:05:36Z"
+        "created_at": "2023-03-17T11:05:36Z"
       },
       {
-        "title": "Interior Design2",
-        "description": "Lorem ipsum dolor amet consectetur adipiscing elit sed eiusmod tempor incididunt ut labore.",
-        "category": "interior-design",
-        "created_at": "2020-02-17T11:05:36Z"
-      },
-      {
-        "title": "Interior Design3",
-        "description": "Lorem ipsum dolor amet consectetur adipiscing elit sed eiusmod tempor incididunt ut labore.",
-        "category": "interior-design",
-        "created_at": "2019-02-17T11:05:36Z"
-      },
-      {
-        "title": "Interior Design4",
-        "description": "Lorem ipsum dolor amet consectetur adipiscing elit sed eiusmod tempor incididunt ut labore.",
-        "category": "interior-design",
-        "created_at": "2020-04-17T11:24:36Z"
-      },
-      {
-        "title": "Interior Design5",
-        "description": "Lorem ipsum dolor amet consectetur adipiscing elit sed eiusmod tempor incididunt ut labore.",
-        "category": "interior-design",
-        "created_at": "2021-05-17T11:05:36Z"
-      },
-      {
-        "title": "Interior Design6",
-        "description": "Lorem ipsum dolor amet consectetur adipiscing elit sed eiusmod tempor incididunt ut labore.",
+        "title": "Renderings and 3D models ",
+        "description": "Provide impeccable renderings and 3D models that let you visualize the end result.",
         "category": "interior-design",
         "created_at": "2023-02-17T11:05:36Z"
+      },
+      {
+        "title": "Extensive industry and market research",
+        "description": "Through extensive industry and market research, we provide recommendations for your demographic.",
+        "category": "interior-design",
+        "created_at": "2023-02-10T11:05:36Z"
+      },
+      {
+        "title": "Functional floor and furniture plan",
+        "description": "It maximizes the impact of your design, ensures a flow that perfectly serves your tasks.",
+        "category": "interior-design",
+        "created_at": "2023-01-17T11:24:36Z"
+      },
+      {
+        "title": "Colors, styles, and materials",
+        "description": "We develop a schematic design, including the colors, styles, and materials best suited to your space.",
+        "category": "interior-design",
+        "created_at": "2023-01-02T11:05:36Z"
       }
     ]
   }
