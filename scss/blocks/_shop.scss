@@ -36,8 +36,8 @@
 
     &__slider {
         position: relative;
-        width: 650px;
-        height: 450px;
+        width: 700px;
+        height: 500px;
         margin: 0 50px;
         border-radius: 140px 0px;
         overflow: hidden;
@@ -50,6 +50,8 @@
         left: 0;
         width: 100%;
         height: 100%;
+        border-radius: 140px 0px;
+        border: none;
         object-fit: cover;
         opacity: 0;
         transition: opacity 0.5s;
