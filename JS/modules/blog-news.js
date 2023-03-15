@@ -1,4 +1,4 @@
-export const blogNews = () => {
+export const blogNews = async () => {
 	const latestNewsSection = document.querySelector("#blog");
 	const latestNewContainer = document.querySelector(".blog-news__items");
 	const count = 4;
@@ -45,35 +45,4 @@ export const blogNews = () => {
 	}
 
 	window.addEventListener("scroll", createCardsOnScroll);
-
-	// latestNewContainer.addEventListener("mouseover", (event) => {
-	// 	if (event.target.classList.contains("blog-news__item") || event.target.parentNode()) {
-	// 		// Scale up the image
-	// 		const image = event.target.querySelector(".blog-news__item-img img");
-	// 		image.style.transform = "scale(1.2)";
-	
-	// 		// Extend the description
-	// 		const description = event.target.querySelector(
-	// 			".blog-news__item-description"
-	// 		);
-	// 		description.classList.add("blog-news__item-description_extended");
-	// 	}
-	// });
-	
-	// // Add an event listener for mouseleave events on the parent element
-	// latestNewContainer.addEventListener("mouseout", (event) => {
-	// 	// Check if the event target is a card element
-	// 	const isCard = event.target.classList.contains("blog-news__item");
-	// 	if (isCard) {
-	// 		event.target.style.boxShadow = "";
-	
-	// 		const image = event.target.querySelector(".blog-news__item-img");
-	// 		image.style.transform = "scale(0.8)";;
-	
-	// 		const description = event.target.querySelector(
-	// 			".blog-news__item-description"
-	// 		);
-	// 		description.classList.remove("blog-news__item-description_extended");
-	// 	}
-	// });
 };
