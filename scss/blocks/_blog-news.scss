@@ -33,8 +33,32 @@
         gap: 4%;
     }
 
+    &__item-wrapper {
+        position: relative;
+        min-height: 800px;
+        animation: fadeIn 3s ease-in-out;
+    }
+
     &__item {
-        animation: fadeIn 3s linear;
+        position: absolute;
+        background: $color-white-smoke;
+        &:hover {
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
+            z-index: 2;
+            .blog-news__item-img {
+                width: 630px;
+                height: 440px;
+            }
+            .blog-news__item-description {
+                height: auto;
+                text-overflow: initial;
+                overflow: visible;
+                display: block;
+            }
+        }
+    
     }
 
     &__item-img {
@@ -49,8 +73,6 @@
             height: 100%;
             border-radius: 100px 0px;
             object-fit: cover;
-        
-            
         }
 
         &:after {
