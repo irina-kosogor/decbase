@@ -4,6 +4,7 @@ export const services = async () => {
 	const architectureBtn = document.querySelector("#architectureBtn");
 	const planningBtn = document.querySelector("#planningBtn");
 	const cardContainer = document.querySelector(".our-services-cards");
+	let currentCategory;
 
 	const design = await fetch("JS/json/design.json")
 		.then((response) => response.json())
@@ -69,6 +70,11 @@ export const services = async () => {
 	}
 
 	function handleFilterClick(category) {
+		if (currentCategory == category) {
+			return;
+		}
+		currentCategory = category;
+
 		let filteredProjects;
 		if (category === "all") {
 			filteredProjects = [design[0], architecture[0], planning[0]];
