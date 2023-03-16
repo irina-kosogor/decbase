@@ -4,7 +4,10 @@ export const blogNews = async () => {
 	const count = 4;
 	const keyWord = "interior design + modern interior + architecture";
 	const apiKey = "4e50d70223c24aeb8dc778b18d4683d1";
-	const newsApi = `https://newsapi.org/v2/everything?pageSize=${count}&q=${keyWord}&apiKey=${apiKey}`;
+	const proxyApi = "https://cors-anywhere.herokuapp.com";
+	const newsApi = `${proxyApi}/https://newsapi.org/v2/everything?pageSize=${count}&q=${keyWord}&apiKey=${apiKey}`;
+
+	console.log(newsApi);
 
 	async function getNews() {
 		try {
