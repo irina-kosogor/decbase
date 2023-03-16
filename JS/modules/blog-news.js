@@ -8,7 +8,12 @@ export const blogNews = async () => {
 
 	async function getNews() {
 		try {
-			const response = await fetch(newsApi);
+			const response = await fetch(newsApi, {
+				headers: {
+				  "Access-Control-Allow-Origin": "*",
+				  "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
+				}
+			  });
 			const data = await response.json();
 			return data;
 		} catch (error) {
