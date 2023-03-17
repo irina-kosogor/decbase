@@ -28,14 +28,9 @@
 
     @media (max-width: $small-device-breakpoint) {
         &__btns {
-            top: 130px;
+            bottom: -50px;
             left: 50%;
             transform: translateX(-50%);
-        }
-    }
-    @media (max-width: $x-small-device-breakpoint) {
-        &__btns {
-            top: 200px;
         }
     }
 
