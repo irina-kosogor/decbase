@@ -35,6 +35,7 @@
     background: url('../icons/stats_arrow.svg') no-repeat;
     top: 90px;
     left: 185px;
+    z-index: -1;
 }
 
 @mixin before-testimonials {

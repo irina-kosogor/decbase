@@ -18,13 +18,19 @@ const blogNews = async () => {
 	const count = 4;
 	const keyWord = "interior design + modern interior + architecture";
 	const apiKey = "4e50d70223c24aeb8dc778b18d4683d1";
-	const proxyApi = "https://cors-anywhere.herokuapp.com";
-	const newsApi = `${proxyApi}/https://newsapi.org/v2/everything?pageSize=${count}&q=${keyWord}&apiKey=${apiKey}`;
-
-	console.log(newsApi);
+	// const proxyApi = "https://cors-anywhere.herokuapp.com";
+	// const newsApi = `${proxyApi}/https://newsapi.org/v2/everything?pageSize=${count}&q=${keyWord}&apiKey=${apiKey}`;
+	const newsApi = `https://newsapi.org/v2/everything?pageSize=${count}&q=${keyWord}&apiKey=${apiKey}`;
 
 	async function getNews() {
 		try {
+			// const response = await fetch(newsApi, {
+			// 	headers: {
+			// 		"Access-Control-Allow-Origin": "*",
+			// 		"Access-Control-Allow-Headers":
+			// 			"Origin, X-Requested-With, Content-Type, Accept",
+			// 	},
+			// });
 			const response = await fetch(newsApi);
 			const data = await response.json();
 			return data;
@@ -151,7 +157,6 @@ const formValidation = () => {
 			addValidationClass(nameInput, "sign-up-form__name_error");
 			setTimeout(() => {
 				errorInputText.innerHTML = "";
-				removeValidationClass(nameInput, "sign-up-form__name_error");
 			}, 2000);
 			nameInput.focus();
 			return;
@@ -162,7 +167,6 @@ const formValidation = () => {
 			addValidationClass(surnameInput, "sign-up-form__name_error");
 			setTimeout(() => {
 				errorInputText.innerHTML = "";
-				removeValidationClass(surnameInput, "sign-up-form__name_error");
 			}, 2000);
 			surnameInput.focus();
 			return;
@@ -173,7 +177,6 @@ const formValidation = () => {
 			addValidationClass(emailInput, "sign-up-form__name_error");
 			setTimeout(() => {
 				errorInputEmail.innerHTML = "";
-				removeValidationClass(emailInput, "sign-up-form__name_error");
 			}, 2000);
 			emailInput.focus();
 			return;
@@ -204,6 +207,33 @@ const formValidation = () => {
 		}
 
 		signUpForm.reset();
+	});
+};
+
+
+/***/ }),
+
+/***/ "./js/modules/hamburger.js":
+/*!*********************************!*\
+  !*** ./js/modules/hamburger.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "toggleHamburger": () => (/* binding */ toggleHamburger)
+/* harmony export */ });
+const toggleHamburger = () => {
+	const hamburger = document.querySelector(".hamburger"),
+		menu = document.querySelector(".mobile-menu"),
+		closeElem = document.querySelector(".mobile-menu__close");
+
+	hamburger.addEventListener("click", () => {
+		menu.classList.add("active");
+	});
+
+	closeElem.addEventListener("click", () => {
+		menu.classList.remove("active");
 	});
 };
 
@@ -416,33 +446,33 @@ const services = async () => {
 	}
 
 	function removeActiveClass() {
-		allBtn.classList.remove("active");
-		interiorBtn.classList.remove("active");
-		architectureBtn.classList.remove("active");
-		planningBtn.classList.remove("active");
+		allBtn.classList.remove("active-btn");
+		interiorBtn.classList.remove("active-btn");
+		architectureBtn.classList.remove("active-btn");
+		planningBtn.classList.remove("active-btn");
 	}
 
 	allBtn.addEventListener("click", () => {
 		removeActiveClass();
-		allBtn.classList.toggle("active");
+		allBtn.classList.toggle("active-btn");
 		handleFilterClick("all");
 	});
 
 	interiorBtn.addEventListener("click", () => {
 		removeActiveClass();
-		interiorBtn.classList.toggle("active");
+		interiorBtn.classList.toggle("active-btn");
 		handleFilterClick("interior-design");
 	});
 
 	architectureBtn.addEventListener("click", () => {
 		removeActiveClass();
-		architectureBtn.classList.toggle("active");
+		architectureBtn.classList.toggle("active-btn");
 		handleFilterClick("architecture");
 	});
 
 	planningBtn.addEventListener("click", () => {
 		removeActiveClass();
-		planningBtn.classList.toggle("active");
+		planningBtn.classList.toggle("active-btn");
 		handleFilterClick("planning");
 	});
 };
@@ -458,13 +488,14 @@ const services = async () => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "showCards": () => (/* binding */ showCards)
+/* harmony export */   "showCards": () => (/* binding */ showCards),
+/* harmony export */   "shownCards": () => (/* binding */ shownCards)
 /* harmony export */ });
 /* harmony import */ var _faker_js_faker__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @faker-js/faker */ "./node_modules/@faker-js/faker/dist/esm/index.mjs");
 
 
 const testimonials = document.querySelector(".testimonials__cards");
-const shownCards = 2;
+const shownCards = window.innerWidth < 1199.98 ? 1 : 2;
 let currentCard = 0;
 let cardsNumber = 10;
 
@@ -475,24 +506,26 @@ for (let i = 0; i < cardsNumber; i++) {
 	const avatar = _faker_js_faker__WEBPACK_IMPORTED_MODULE_0__.faker.image.avatar();
 
 	const card = document.createElement("div");
-	card.classList.add("testimonials__card");
+	card.classList.add("testimonials__card-wrapper");
 	card.innerHTML = `
-			<div class="testimonials__card-img">
-                <img src="${avatar}" alt="testimonials-img">
-            </div>
-			<div class="testimonials__card-title">
-				<span class="testimonials__card-title_name">${name}</span>
-				<span class="testimonials__card-title_position"> /${position}</span>
-			</div>
-			<div class="testimonials__card-description">
-				${quote}
+			<div class="testimonials__card">
+				<div class="testimonials__card-img">
+					<img src="${avatar}" alt="testimonials-img">
+				</div>
+				<div class="testimonials__card-title">
+					<span class="testimonials__card-title_name">${name}</span>
+					<span class="testimonials__card-title_position"> /${position}</span>
+				</div>
+				<div class="testimonials__card-description">
+					${quote}
+				</div>
 			</div>
 		`;
 
 	testimonials.append(card);
 }
 
-const updatedCards = testimonials.querySelectorAll(".testimonials__card");
+const updatedCards = testimonials.querySelectorAll(".testimonials__card-wrapper");
 const updatedTotalCards = updatedCards.length;
 
 showCards();
@@ -533,6 +566,7 @@ function fadeIn(element) {
 		}
 	}, 20);
 }
+
 
 
 /***/ }),
@@ -1553,8 +1587,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_form_validation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/form-validation */ "./js/modules/form-validation.js");
 /* harmony import */ var _modules_blog_news__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/blog-news */ "./js/modules/blog-news.js");
 /* harmony import */ var _modules_services__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/services */ "./js/modules/services.js");
+/* harmony import */ var _modules_hamburger__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/hamburger */ "./js/modules/hamburger.js");
 
 // import { createSlider } from "./modules/shop";
+
+
 
 
 
@@ -1578,11 +1615,17 @@ window.addEventListener("DOMContentLoaded", () => {
 	(0,_modules_form_validation__WEBPACK_IMPORTED_MODULE_4__.formValidation)();
 	(0,_modules_blog_news__WEBPACK_IMPORTED_MODULE_5__.blogNews)();
 	(0,_modules_services__WEBPACK_IMPORTED_MODULE_6__.services)();
+	(0,_modules_hamburger__WEBPACK_IMPORTED_MODULE_7__.toggleHamburger)();
 });
 
 window.addEventListener("scroll", () => {
 	(0,_modules_header__WEBPACK_IMPORTED_MODULE_0__.stickNavbarToTop)();
 	(0,_modules_header__WEBPACK_IMPORTED_MODULE_0__.showProgress)();
+});
+
+window.addEventListener('resize', () => {
+	_modules_testimonials_slider__WEBPACK_IMPORTED_MODULE_3__.shownCards = window.innerWidth <= 1199.98 ? 1 : 2;
+	(0,_modules_testimonials_slider__WEBPACK_IMPORTED_MODULE_3__.showCards)();
 });
 
 

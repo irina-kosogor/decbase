@@ -14,6 +14,12 @@
         margin-bottom: 80px;
     }
 
+    @media (max-width: $small-device-breakpoint) {
+        &__title {
+            margin-bottom: 40px;
+        }
+    }
+
     &__content-wrapper {
         display: flex;
         justify-content: center;
@@ -44,6 +50,21 @@
         box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
     }
 
+    @media (max-width: $medium-device-breakpoint) {
+        &__slider {
+            margin: 0 20px;
+        }
+    }
+
+    @media (max-width: $small-device-breakpoint) {
+        &__slider {
+            margin: 0 15px;
+            width: 350px;
+            height: 300px;
+            border-radius: 90px 0px;
+        }
+    }
+
     &__slider img {
         position: absolute;
         top: 0;
@@ -59,5 +80,11 @@
 
     &__slider img.active {
         opacity: 1;
+    }
+}
+
+@media (max-width: $small-device-breakpoint) {
+    .shop {
+        padding-bottom: 60px;
     }
 }

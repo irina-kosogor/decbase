@@ -1,22 +1,51 @@
 .success-story {
     padding-bottom: 220px;
-    background: url('../../images/secondary_decore.svg') top 390px right 45px/212px 153px no-repeat;
 
     &__inner {
         display: flex;
         gap: 30px;
         justify-content: space-between;
         align-items: center;
+        position: relative;
+
+        &:after {
+            content: "";
+            background: url('../images/secondary_decore.svg') no-repeat;
+            position: absolute;
+            width: 212px;
+            height: 153px;
+            top: 50%;
+            right: -250px;
+        }
     }
 
     &__content {
-        flex: 1;
+        width: 45%;
         font-family: 'Open Sans', sans-serif;
         color: $color-gray;
     }
 
+    @media (max-width: $small-device-breakpoint) {
+        &__content {
+            width: 100%;
+        }
+    }
+
     &__content-image {
         margin-bottom: 45px;
+    }
+
+    @media (max-width: $large-device-breakpoint) {
+        &__content-image {
+            width: 70%;
+            height: 100%;
+        }
+    }
+
+    @media (max-width: $large-device-breakpoint) {
+        &__content-image {
+            width: 50%;
+        }
     }
 
     &__title {
@@ -26,6 +55,12 @@
         line-height: 65px;
         color: $color-gray-dark;
         margin-bottom: 35px;
+    }
+
+    @media (max-width: $large-device-breakpoint) {
+        &__title {
+            line-height: 45px;
+        }
     }
 
     &__description {
@@ -44,12 +79,13 @@
     }
 
     &__image {
-        width: 679px;
-        height: 711px;
+        width: 55%;
+        height: 600px;
         position: relative;
 
         img {
             width: 100%;
+            height: 100%;
             border-radius: 140px 0px;
             object-fit: cover;
         }
@@ -57,13 +93,46 @@
         &:after {
             content: '';
             position: absolute;
-            width: 679px;
-            height: 711px;
+            width: 100%;
+            height: 100%;
             border: 2px solid $color-brown;
             border-radius: 140px 0px;
             top: 32px;
             left: 35px;
             z-index: -1;
         }
+    }
+
+
+    @media (max-width: $large-device-breakpoint) {
+        &__image {
+            width: 50%;
+            height: 100%;
+        }
+    }
+
+    @media (max-width: $medium-device-breakpoint) {
+        &__image {
+            height: 600px;
+        }
+    }
+
+    @media (max-width: $small-device-breakpoint) {
+        &__image {
+          display: none;
+        }
+    }
+
+}
+
+@media (max-width: $large-device-breakpoint) {
+    .success-story {
+        padding-bottom: 120px;
+    }
+}
+
+@media (max-width: $small-device-breakpoint) {
+    .success-story {
+        padding-bottom: 60px;
     }
 }

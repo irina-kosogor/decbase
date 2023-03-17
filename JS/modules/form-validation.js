@@ -53,7 +53,6 @@ export const formValidation = () => {
 			addValidationClass(nameInput, "sign-up-form__name_error");
 			setTimeout(() => {
 				errorInputText.innerHTML = "";
-				removeValidationClass(nameInput, "sign-up-form__name_error");
 			}, 2000);
 			nameInput.focus();
 			return;
@@ -64,7 +63,6 @@ export const formValidation = () => {
 			addValidationClass(surnameInput, "sign-up-form__name_error");
 			setTimeout(() => {
 				errorInputText.innerHTML = "";
-				removeValidationClass(surnameInput, "sign-up-form__name_error");
 			}, 2000);
 			surnameInput.focus();
 			return;
@@ -75,7 +73,6 @@ export const formValidation = () => {
 			addValidationClass(emailInput, "sign-up-form__name_error");
 			setTimeout(() => {
 				errorInputEmail.innerHTML = "";
-				removeValidationClass(emailInput, "sign-up-form__name_error");
 			}, 2000);
 			emailInput.focus();
 			return;

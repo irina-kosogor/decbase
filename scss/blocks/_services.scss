@@ -1,6 +1,6 @@
 .our-services {
-    padding: 143px 0 154px 0;
-    background: url('../../images/services_decore.svg') top 685px right -10px/245px 254px no-repeat;
+    padding: 143px 0 225px 0;
+    background: url('../images/main_decore.svg') bottom right no-repeat;
 
     &__subtitle {
         @include main-subtitle;
@@ -10,11 +10,23 @@
         @include main-title;
         margin-bottom: 44px;
     }
+
+    @media (max-width: $small-device-breakpoint) {
+        &__title {
+            margin-bottom: 24px;
+        }
+    }
+}
+
+@media (max-width: $large-device-breakpoint) {
+    .our-services {
+        padding-top: 50px;
+    }
 }
 
 .our-services-header {
     display: flex;
-    gap: 75px;
+    gap: 5%;
     margin-bottom: 110px;
 
     &__btn {
@@ -25,7 +37,19 @@
     }
 }
 
-.active {
+@media (max-width: $small-device-breakpoint) {
+    .our-services-header {
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 60px;
+        justify-content: center;
+        &__btn {
+            min-width: 150px;
+        }
+    }
+}
+
+.active-btn {
     background-color: $color-white;
     color: $color-main-green;
     border: 5px solid $color-main-green;
@@ -35,13 +59,20 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 80px;
+    gap: 30px;
+}
+
+@media (max-width: $small-device-breakpoint) {
+    .our-services-cards {
+       flex-direction: column;
+       align-items: center;
+    }
 }
 
 .our-services-card {
     position: relative;
     padding: 30px 24px 15px 106px;
-    max-width: 29%;
+    max-width: 30%;
     min-height: 164px;
     background: #FFFFFF;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
@@ -63,6 +94,7 @@
         font-weight: 700;
         font-size: $fs-24;
         color: $color-gray-dark;
+        min-height: 45px;
     }
 
     &__description {
@@ -75,12 +107,15 @@
 
     &_architecture {
         background: $color-brown-light;
+
         &:before {
             background: url('../../icons/services_architecture.png') no-repeat;
         }
+
         .our-services-card__title {
             color: $color-white;
         }
+
         .our-services-card__description {
             color: $color-white;
         }
@@ -90,5 +125,19 @@
         &:before {
             background: url('../../icons/services_planning.png') no-repeat;
         }
+    }
+}
+
+@media (max-width: $large-device-breakpoint) {
+    .our-services-card {
+        max-width: 45%;
+        min-height: 164px;
+    }
+}
+
+@media (max-width: $small-device-breakpoint) {
+    .our-services-card {
+        max-width: 90%;
+        min-height: 164px;
     }
 }

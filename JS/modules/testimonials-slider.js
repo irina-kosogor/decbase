@@ -1,7 +1,7 @@
 import { faker } from "@faker-js/faker";
 
 const testimonials = document.querySelector(".testimonials__cards");
-const shownCards = 2;
+export const shownCards = window.innerWidth < 1199.98 ? 1 : 2;
 let currentCard = 0;
 let cardsNumber = 10;
 
@@ -12,24 +12,26 @@ for (let i = 0; i < cardsNumber; i++) {
 	const avatar = faker.image.avatar();
 
 	const card = document.createElement("div");
-	card.classList.add("testimonials__card");
+	card.classList.add("testimonials__card-wrapper");
 	card.innerHTML = `
-			<div class="testimonials__card-img">
-                <img src="${avatar}" alt="testimonials-img">
-            </div>
-			<div class="testimonials__card-title">
-				<span class="testimonials__card-title_name">${name}</span>
-				<span class="testimonials__card-title_position"> /${position}</span>
-			</div>
-			<div class="testimonials__card-description">
-				${quote}
+			<div class="testimonials__card">
+				<div class="testimonials__card-img">
+					<img src="${avatar}" alt="testimonials-img">
+				</div>
+				<div class="testimonials__card-title">
+					<span class="testimonials__card-title_name">${name}</span>
+					<span class="testimonials__card-title_position"> /${position}</span>
+				</div>
+				<div class="testimonials__card-description">
+					${quote}
+				</div>
 			</div>
 		`;
 
 	testimonials.append(card);
 }
 
-const updatedCards = testimonials.querySelectorAll(".testimonials__card");
+const updatedCards = testimonials.querySelectorAll(".testimonials__card-wrapper");
 const updatedTotalCards = updatedCards.length;
 
 showCards();
@@ -70,3 +72,4 @@ function fadeIn(element) {
 		}
 	}, 20);
 }
+

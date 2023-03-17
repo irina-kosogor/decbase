@@ -88,33 +88,33 @@ export const services = async () => {
 	}
 
 	function removeActiveClass() {
-		allBtn.classList.remove("active");
-		interiorBtn.classList.remove("active");
-		architectureBtn.classList.remove("active");
-		planningBtn.classList.remove("active");
+		allBtn.classList.remove("active-btn");
+		interiorBtn.classList.remove("active-btn");
+		architectureBtn.classList.remove("active-btn");
+		planningBtn.classList.remove("active-btn");
 	}
 
 	allBtn.addEventListener("click", () => {
 		removeActiveClass();
-		allBtn.classList.toggle("active");
+		allBtn.classList.toggle("active-btn");
 		handleFilterClick("all");
 	});
 
 	interiorBtn.addEventListener("click", () => {
 		removeActiveClass();
-		interiorBtn.classList.toggle("active");
+		interiorBtn.classList.toggle("active-btn");
 		handleFilterClick("interior-design");
 	});
 
 	architectureBtn.addEventListener("click", () => {
 		removeActiveClass();
-		architectureBtn.classList.toggle("active");
+		architectureBtn.classList.toggle("active-btn");
 		handleFilterClick("architecture");
 	});
 
 	planningBtn.addEventListener("click", () => {
 		removeActiveClass();
-		planningBtn.classList.toggle("active");
+		planningBtn.classList.toggle("active-btn");
 		handleFilterClick("planning");
 	});
 };

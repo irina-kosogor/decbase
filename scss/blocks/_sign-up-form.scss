@@ -36,6 +36,13 @@
         margin-bottom: 36px;
     }
 
+    @media (max-width: $small-device-breakpoint) {
+        &__description {
+            width: 80%;
+        }
+    
+    }
+
     .sign-up-form {
         width: 60%;
         margin: 0 auto;
@@ -50,7 +57,7 @@
         &__surname,
         &__email {
             position: relative;
-            width: 317px;
+            width: 45%;
             height: 48px;
             background: $color-gray-light;
             border-radius: 20px 0px;
@@ -86,6 +93,34 @@
             cursor: pointer;
         }
     }
+
+    
+    @media (max-width: $large-device-breakpoint) {
+        .sign-up-form {
+            width: 80%;
+        }
+    }
+
+    @media (max-width: $small-device-breakpoint) {
+        .sign-up-form {
+            width: 95%;
+        }
+    }
+}
+
+@media (max-width: $small-device-breakpoint) {
+   .sign-up {
+    padding-bottom: 180px;
+   }
+}
+
+
+@media (max-width: $large-device-breakpoint) {
+    .sign-up {
+        &:after {
+            bottom: 0;
+        }
+    }
 }
 
 .greeting {
@@ -95,7 +130,7 @@
     color: $color-main-green;
     border-radius: 40px;
     padding: 20px 40px;
-    font-size: 20px;
+    font-size: $fs-20;
     text-align: center;
     animation: scale-up-center 2s linear both;
     span {
@@ -103,4 +138,5 @@
         color: $color-red;
     }
 }
+
 
