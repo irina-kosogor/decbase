@@ -1,8 +1,8 @@
 import { stickNavbarToTop, showProgress } from "./modules/header";
-import { createSlider } from "./modules/shop";
+// import { createSlider } from "./modules/shop";
 import { setCurrentYear } from "./modules/footer-year";
 import { closeWindowAfterTimeout } from "./modules/modal-close-window";
-import { showCards, shownCards } from "./modules/testimonials-slider";
+import { testimonialsSlider } from "./modules/testimonials-slider";
 import { formValidation } from "./modules/form-validation";
 import { blogNews } from "./modules/blog-news";
 import { services } from "./modules/services";
@@ -18,11 +18,11 @@ import { toggleHamburger } from "./modules/hamburger";
 // });
 
 window.addEventListener("DOMContentLoaded", () => {
-	createSlider();
+	// createSlider();
 	setCurrentYear();
 	closeWindowAfterTimeout();
-	showCards();
 	formValidation();
+	testimonialsSlider();
 	blogNews();
 	services();
 	toggleHamburger();
@@ -33,8 +33,4 @@ window.addEventListener("scroll", () => {
 	showProgress();
 });
 
-window.addEventListener('resize', () => {
-	shownCards = window.innerWidth <= 1199.98 ? 1 : 2;
-	showCards();
-});
 

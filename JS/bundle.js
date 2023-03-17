@@ -16,22 +16,13 @@ const blogNews = async () => {
 	const latestNewsSection = document.querySelector("#blog");
 	const latestNewContainer = document.querySelector(".blog-news__items");
 	const count = 4;
-	const keyWord = "interior design + modern interior + architecture";
-	const apiKey = "4e50d70223c24aeb8dc778b18d4683d1";
-	const proxyApi = "https://cors-anywhere.herokuapp.com";
-	const newsApi = `${proxyApi}/https://newsapi.org/v2/everything?pageSize=${count}&q=${keyWord}&apiKey=${apiKey}`;
-	// const newsApi = `https://newsapi.org/v2/everything?pageSize=${count}&q=${keyWord}&apiKey=${apiKey}`;
+	const keyWords = "interior design homes";
+	const apiKey = "533370f06f8d1a8afb6e96be34bc179a";
+	const apiUrl = `https://gnews.io/api/v4/search?q=${keyWords}&sortby=publishedAt&lang=en&max=${count}&apikey=${apiKey}`;
 
 	async function getNews() {
 		try {
-			const response = await fetch(newsApi, {
-				headers: {
-					"Access-Control-Allow-Origin": "*",
-					"Access-Control-Allow-Headers":
-						"Origin, X-Requested-With, Content-Type, Accept",
-				},
-			});
-			// const response = await fetch(newsApi);
+			const response = await fetch(apiUrl);
 			const data = await response.json();
 			return data;
 		} catch (error) {
@@ -42,13 +33,13 @@ const blogNews = async () => {
 	async function createNewsCards() {
 		const news = await getNews();
 		news?.articles.forEach((article) => {
-			const { urlToImage, title, description } = article;
+			const { image, title, description } = article;
 			const newsCard = document.createElement("div");
 			newsCard.classList.add("blog-news__item-wrapper");
 			newsCard.innerHTML = `
 				<div class="blog-news__item">
 				<div class="blog-news__item-img">
-					<img src="${urlToImage}" alt="blog-news-img">
+					<img src="${image}" alt="blog-news-img">
 				</div>
 				<h3 class="blog-news__item-title">${title}</h3>
 				<div class="blog-news__item-description">${description}</div>
@@ -485,82 +476,6 @@ const services = async () => {
 
 /***/ }),
 
-/***/ "./js/modules/shop.js":
-/*!****************************!*\
-  !*** ./js/modules/shop.js ***!
-  \****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "createSlider": () => (/* binding */ createSlider)
-/* harmony export */ });
-const sliderContainer = document.querySelector(".shop__slider");
-const btnPrevious = document.querySelector(".shop__btn_previous");
-const btnNext = document.querySelector(".shop__btn_next");
-
-const count = 5;
-const collection = 9475907;
-const apiKey = "9X9s_kjLwTgBifHuKGDg1bUXJHkcGi4MFOfBCG2GZMY";
-const apiUrl = `https://api.unsplash.com/photos/random?collections=${collection}&count=${count}&client_id=${apiKey}`;
-
-async function getPhotos() {
-	try {
-		const response = await fetch(apiUrl);
-		const data = await response.json();
-		return data.map((photo) => photo.urls.regular);
-	} catch (error) {
-		console.log(error);
-	}
-}
-
-async function createSlider() {
-	const photos = await getPhotos();
-	const slides = [];
-	photos.forEach((photo, index) => {
-		const img = document.createElement("img");
-		img.src = photo;
-		if (index === 0) {
-			img.classList.add("active");
-		}
-		slides.push(img);
-		sliderContainer.append(img);
-	});
-	btnPrevious.addEventListener("click", () => {
-		prevSlide(slides);
-	});
-	btnNext.addEventListener("click", () => {
-		nextSlide(slides);
-	});
-	return slides;
-}
-
-function prevSlide(slides) {
-	const current = document.querySelector(".active");
-	const index = slides.indexOf(current);
-	current.classList.remove("active");
-	if (index === 0) {
-		slides[slides.length - 1].classList.add("active");
-	} else {
-		slides[index - 1].classList.add("active");
-	}
-}
-
-function nextSlide(slides) {
-	const current = document.querySelector(".active");
-	const index = slides.indexOf(current);
-	current.classList.remove("active");
-	if (index === slides.length - 1) {
-		slides[0].classList.add("active");
-	} else {
-		slides[index + 1].classList.add("active");
-	}
-}
-
-
-
-/***/ }),
-
 /***/ "./js/modules/testimonials-slider.js":
 /*!*******************************************!*\
   !*** ./js/modules/testimonials-slider.js ***!
@@ -569,26 +484,26 @@ function nextSlide(slides) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "showCards": () => (/* binding */ showCards),
-/* harmony export */   "shownCards": () => (/* binding */ shownCards)
+/* harmony export */   "testimonialsSlider": () => (/* binding */ testimonialsSlider)
 /* harmony export */ });
 /* harmony import */ var _faker_js_faker__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @faker-js/faker */ "./node_modules/@faker-js/faker/dist/esm/index.mjs");
 
 
-const testimonials = document.querySelector(".testimonials__cards");
-const shownCards = window.innerWidth < 1199.98 ? 1 : 2;
-let currentCard = 0;
-let cardsNumber = 10;
+const testimonialsSlider = () => {
+	const testimonials = document.querySelector(".testimonials__cards");
+	let shownCards = window.innerWidth < 1199.98 ? 1 : 2;
+	let currentCard = 0;
+	let cardsNumber = 10;
 
-for (let i = 0; i < cardsNumber; i++) {
-	const name = _faker_js_faker__WEBPACK_IMPORTED_MODULE_0__.faker.name.fullName();
-	const position = _faker_js_faker__WEBPACK_IMPORTED_MODULE_0__.faker.name.jobTitle();
-	const quote = _faker_js_faker__WEBPACK_IMPORTED_MODULE_0__.faker.lorem.sentence();
-	const avatar = _faker_js_faker__WEBPACK_IMPORTED_MODULE_0__.faker.image.avatar();
+	for (let i = 0; i < cardsNumber; i++) {
+		const name = _faker_js_faker__WEBPACK_IMPORTED_MODULE_0__.faker.name.fullName();
+		const position = _faker_js_faker__WEBPACK_IMPORTED_MODULE_0__.faker.name.jobTitle();
+		const quote = _faker_js_faker__WEBPACK_IMPORTED_MODULE_0__.faker.lorem.sentence();
+		const avatar = _faker_js_faker__WEBPACK_IMPORTED_MODULE_0__.faker.image.avatar();
 
-	const card = document.createElement("div");
-	card.classList.add("testimonials__card-wrapper");
-	card.innerHTML = `
+		const card = document.createElement("div");
+		card.classList.add("testimonials__card-wrapper");
+		card.innerHTML = `
 			<div class="testimonials__card">
 				<div class="testimonials__card-img">
 					<img src="${avatar}" alt="testimonials-img">
@@ -603,51 +518,60 @@ for (let i = 0; i < cardsNumber; i++) {
 			</div>
 		`;
 
-	testimonials.append(card);
-}
+		testimonials.append(card);
+	}
 
-const updatedCards = testimonials.querySelectorAll(".testimonials__card-wrapper");
-const updatedTotalCards = updatedCards.length;
+	const updatedCards = testimonials.querySelectorAll(
+		".testimonials__card-wrapper"
+	);
+	const updatedTotalCards = updatedCards.length;
 
-showCards();
-
-const btnLeft = document.querySelector(".testimonials__btn_left");
-btnLeft.addEventListener("click", () => {
-	currentCard = currentCard === 0 ? updatedTotalCards - 1 : currentCard - 1;
 	showCards();
-});
 
-const btnRight = document.querySelector(".testimonials__btn_right");
-btnRight.addEventListener("click", () => {
-	currentCard = currentCard === updatedTotalCards - 1 ? 0 : currentCard + 1;
-	showCards();
-});
-
-function showCards() {
-	updatedCards.forEach((card) => {
-		card.style.display = "none";
+	const btnLeft = document.querySelector(".testimonials__btn_left");
+	btnLeft.addEventListener("click", () => {
+		currentCard =
+			currentCard === 0 ? updatedTotalCards - 1 : currentCard - 1;
+		showCards();
 	});
 
-	for (let i = 0; i < shownCards; i++) {
-		const index = (currentCard + i) % updatedTotalCards;
-		const card = updatedCards[index];
-		card.style.display = "block";
-		card.style.opacity = 0;
-		fadeIn(card);
-	}
-}
+	const btnRight = document.querySelector(".testimonials__btn_right");
+	btnRight.addEventListener("click", () => {
+		currentCard =
+			currentCard === updatedTotalCards - 1 ? 0 : currentCard + 1;
+		showCards();
+	});
 
-function fadeIn(element) {
-	let opacity = 0;
-	const interval = setInterval(() => {
-		opacity += 0.05;
-		element.style.opacity = opacity;
-		if (opacity >= 1) {
-			clearInterval(interval);
+	function showCards() {
+		updatedCards.forEach((card) => {
+			card.style.display = "none";
+		});
+
+		for (let i = 0; i < shownCards; i++) {
+			const index = (currentCard + i) % updatedTotalCards;
+			const card = updatedCards[index];
+			card.style.display = "block";
+			card.style.opacity = 0;
+			fadeIn(card);
 		}
-	}, 20);
-}
+	}
 
+	function fadeIn(element) {
+		let opacity = 0;
+		const interval = setInterval(() => {
+			opacity += 0.05;
+			element.style.opacity = opacity;
+			if (opacity >= 1) {
+				clearInterval(interval);
+			}
+		}, 20);
+	}
+
+	window.addEventListener("resize", () => {
+		shownCards = window.innerWidth <= 1199.98 ? 1 : 2;
+		showCards();
+	});
+};
 
 
 /***/ }),
@@ -1662,16 +1586,15 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/header */ "./js/modules/header.js");
-/* harmony import */ var _modules_shop__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/shop */ "./js/modules/shop.js");
-/* harmony import */ var _modules_footer_year__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/footer-year */ "./js/modules/footer-year.js");
-/* harmony import */ var _modules_modal_close_window__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/modal-close-window */ "./js/modules/modal-close-window.js");
-/* harmony import */ var _modules_testimonials_slider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/testimonials-slider */ "./js/modules/testimonials-slider.js");
-/* harmony import */ var _modules_form_validation__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/form-validation */ "./js/modules/form-validation.js");
-/* harmony import */ var _modules_blog_news__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/blog-news */ "./js/modules/blog-news.js");
-/* harmony import */ var _modules_services__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/services */ "./js/modules/services.js");
-/* harmony import */ var _modules_hamburger__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/hamburger */ "./js/modules/hamburger.js");
+/* harmony import */ var _modules_footer_year__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/footer-year */ "./js/modules/footer-year.js");
+/* harmony import */ var _modules_modal_close_window__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/modal-close-window */ "./js/modules/modal-close-window.js");
+/* harmony import */ var _modules_testimonials_slider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/testimonials-slider */ "./js/modules/testimonials-slider.js");
+/* harmony import */ var _modules_form_validation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/form-validation */ "./js/modules/form-validation.js");
+/* harmony import */ var _modules_blog_news__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/blog-news */ "./js/modules/blog-news.js");
+/* harmony import */ var _modules_services__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/services */ "./js/modules/services.js");
+/* harmony import */ var _modules_hamburger__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/hamburger */ "./js/modules/hamburger.js");
 
-
+// import { createSlider } from "./modules/shop";
 
 
 
@@ -1690,14 +1613,14 @@ __webpack_require__.r(__webpack_exports__);
 // });
 
 window.addEventListener("DOMContentLoaded", () => {
-	(0,_modules_shop__WEBPACK_IMPORTED_MODULE_1__.createSlider)();
-	(0,_modules_footer_year__WEBPACK_IMPORTED_MODULE_2__.setCurrentYear)();
-	(0,_modules_modal_close_window__WEBPACK_IMPORTED_MODULE_3__.closeWindowAfterTimeout)();
-	(0,_modules_testimonials_slider__WEBPACK_IMPORTED_MODULE_4__.showCards)();
-	(0,_modules_form_validation__WEBPACK_IMPORTED_MODULE_5__.formValidation)();
-	(0,_modules_blog_news__WEBPACK_IMPORTED_MODULE_6__.blogNews)();
-	(0,_modules_services__WEBPACK_IMPORTED_MODULE_7__.services)();
-	(0,_modules_hamburger__WEBPACK_IMPORTED_MODULE_8__.toggleHamburger)();
+	// createSlider();
+	(0,_modules_footer_year__WEBPACK_IMPORTED_MODULE_1__.setCurrentYear)();
+	(0,_modules_modal_close_window__WEBPACK_IMPORTED_MODULE_2__.closeWindowAfterTimeout)();
+	(0,_modules_form_validation__WEBPACK_IMPORTED_MODULE_4__.formValidation)();
+	(0,_modules_testimonials_slider__WEBPACK_IMPORTED_MODULE_3__.testimonialsSlider)();
+	(0,_modules_blog_news__WEBPACK_IMPORTED_MODULE_5__.blogNews)();
+	(0,_modules_services__WEBPACK_IMPORTED_MODULE_6__.services)();
+	(0,_modules_hamburger__WEBPACK_IMPORTED_MODULE_7__.toggleHamburger)();
 });
 
 window.addEventListener("scroll", () => {
@@ -1705,10 +1628,6 @@ window.addEventListener("scroll", () => {
 	(0,_modules_header__WEBPACK_IMPORTED_MODULE_0__.showProgress)();
 });
 
-window.addEventListener('resize', () => {
-	_modules_testimonials_slider__WEBPACK_IMPORTED_MODULE_4__.shownCards = window.innerWidth <= 1199.98 ? 1 : 2;
-	(0,_modules_testimonials_slider__WEBPACK_IMPORTED_MODULE_4__.showCards)();
-});
 
 
 })();
