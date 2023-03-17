@@ -18,20 +18,20 @@ const blogNews = async () => {
 	const count = 4;
 	const keyWord = "interior design + modern interior + architecture";
 	const apiKey = "4e50d70223c24aeb8dc778b18d4683d1";
-	// const proxyApi = "https://cors-anywhere.herokuapp.com";
-	// const newsApi = `${proxyApi}/https://newsapi.org/v2/everything?pageSize=${count}&q=${keyWord}&apiKey=${apiKey}`;
-	const newsApi = `https://newsapi.org/v2/everything?pageSize=${count}&q=${keyWord}&apiKey=${apiKey}`;
+	const proxyApi = "https://cors-anywhere.herokuapp.com";
+	const newsApi = `${proxyApi}/https://newsapi.org/v2/everything?pageSize=${count}&q=${keyWord}&apiKey=${apiKey}`;
+	// const newsApi = `https://newsapi.org/v2/everything?pageSize=${count}&q=${keyWord}&apiKey=${apiKey}`;
 
 	async function getNews() {
 		try {
-			// const response = await fetch(newsApi, {
-			// 	headers: {
-			// 		"Access-Control-Allow-Origin": "*",
-			// 		"Access-Control-Allow-Headers":
-			// 			"Origin, X-Requested-With, Content-Type, Accept",
-			// 	},
-			// });
-			const response = await fetch(newsApi);
+			const response = await fetch(newsApi, {
+				headers: {
+					"Access-Control-Allow-Origin": "*",
+					"Access-Control-Allow-Headers":
+						"Origin, X-Requested-With, Content-Type, Accept",
+				},
+			});
+			// const response = await fetch(newsApi);
 			const data = await response.json();
 			return data;
 		} catch (error) {
