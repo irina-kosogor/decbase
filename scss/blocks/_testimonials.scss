@@ -33,6 +33,11 @@
             transform: translateX(-50%);
         }
     }
+    @media (max-width: $x-small-device-breakpoint) {
+        &__btns {
+            top: 200px;
+        }
+    }
 
     &__btn {
         display: block;
@@ -65,12 +70,23 @@
 
     &__card-wrapper {
         padding-left: 55px;
-        width: 630px;
+        width: 100%;
+    }
+
+    @media (max-width: $large-device-breakpoint) {
+        &__card-wrapper {
+            width: 70%;
+        }
+    }
+    @media (max-width: $medium-device-breakpoint) {
+        &__card-wrapper {
+            width: 90%;
+        }
     }
 
     @media (max-width: $small-device-breakpoint) {
         &__card-wrapper {
-            width: 350px;
+            width: 95%;
         }
     }
 
