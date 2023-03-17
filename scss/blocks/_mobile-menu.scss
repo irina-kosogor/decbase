@@ -73,7 +73,7 @@
         }
         &_bordered {
             padding-top: 25px;
-            border-top: 2px solid $color-brown;
+            border-top: 2px solid $color-gray-light;
         }
     }
     @media (max-width: $small-device-breakpoint) {
@@ -112,5 +112,4 @@
         height: 100vh;
     }
 }
-
 
