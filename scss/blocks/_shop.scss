@@ -78,6 +78,12 @@
         transition: opacity 0.5s;
     }
 
+    @media (max-width: $small-device-breakpoint) {
+        &__slider img {
+            border-radius: 90px 0px;
+        }
+    }
+
     &__slider img.active {
         opacity: 1;
     }

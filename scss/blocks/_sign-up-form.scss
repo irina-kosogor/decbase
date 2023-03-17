@@ -15,12 +15,18 @@
         margin-bottom: 40px;
     }
 
+    @media (max-width: $small-device-breakpoint) {
+        hr {
+            width: 300px;
+        }
+    }
+
     &:after {
         content: "";
         position: absolute;
         width: 212px;
         height: 150px;
-        background: url('../../images/main_decore.svg') no-repeat;
+        background: url('../images/main_decore.svg') no-repeat;
         bottom: -75px;
         z-index: 2;
     }
@@ -40,7 +46,7 @@
         &__description {
             width: 80%;
         }
-    
+
     }
 
     .sign-up-form {
@@ -94,7 +100,7 @@
         }
     }
 
-    
+
     @media (max-width: $large-device-breakpoint) {
         .sign-up-form {
             width: 80%;
@@ -109,9 +115,9 @@
 }
 
 @media (max-width: $small-device-breakpoint) {
-   .sign-up {
-    padding-bottom: 180px;
-   }
+    .sign-up {
+        padding-bottom: 180px;
+    }
 }
 
 
@@ -133,10 +139,9 @@
     font-size: $fs-20;
     text-align: center;
     animation: scale-up-center 2s linear both;
+
     span {
         font-weight: 700;
         color: $color-red;
     }
 }
-
-
