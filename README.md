@@ -52,8 +52,6 @@ The mobile menu is shown when the user clicks on the hamburger button. This make
 The mobile menu is styled to match the overall design of the website, with clear and easy-to-read text and icons.
 When the user clicks on a menu item, they are taken to the corresponding section of the website. The mobile menu disappears once the user has made their selection or clicks on the "close" button.
 
-This project 
-
 ## Authors
 
 Irina Kosogor
