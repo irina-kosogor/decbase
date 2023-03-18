@@ -64,3 +64,11 @@
         }
     }
 }
+
+@media (max-width: $x-small-device-breakpoint) {
+    .loader__wrapper {
+        span {
+            font-size: $fs-72;
+        }
+    }
+}
