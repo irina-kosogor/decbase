@@ -55,6 +55,12 @@
     &__moto {
         line-height: 28px;
     }
+
+    @media (max-width: $small-device-breakpoint) {
+        &__moto {
+            margin-bottom: 20px;
+        }
+    }
 }
 
 @media (max-width: $medium-device-breakpoint) {
@@ -87,6 +93,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-bottom: 20px;
         }
     }
 
@@ -130,7 +137,7 @@
             justify-content: center;
             display: flex;
             flex-direction: row;
-            gap: 5px;
+            gap: 20px;
         }
     }
 

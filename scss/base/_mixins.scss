@@ -10,6 +10,19 @@
     border-radius: 15px 0px;
     font-family: 'Open Sans', sans-serif;
     color: $color-white;
+    border: 5px solid $color-main-green;
+    &:hover {
+        color: $color-main-green;
+        background: $color-white;
+        transition: all 0.5s ease;
+    }
+}
+
+@mixin service-button {
+    background: $color-main-green;
+    border-radius: 15px 0px;
+    font-family: 'Open Sans', sans-serif;
+    color: $color-white;
 }
 
 @mixin main-subtitle {

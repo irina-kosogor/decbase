@@ -37,7 +37,7 @@
     margin-bottom: 110px;
 
     &__btn {
-        @include main-button;
+        @include service-button;
         border-radius: 20px;
         width: 206px;
         height: 46px;

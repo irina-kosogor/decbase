@@ -35,6 +35,13 @@
         text-align: center;
     }
 
+    @media (max-width: $small-device-breakpoint) {
+        &__content {
+            width: 320px;
+            height: 200px;
+        }
+    }
+
     &__title {
         @include main-subtitle;
         margin-bottom: 40px;
