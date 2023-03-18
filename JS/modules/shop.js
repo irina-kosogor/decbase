@@ -8,10 +8,16 @@ const apiKey = "9X9s_kjLwTgBifHuKGDg1bUXJHkcGi4MFOfBCG2GZMY";
 const apiUrl = `https://api.unsplash.com/photos/random?collections=${collection}&count=${count}&client_id=${apiKey}`;
 
 async function getPhotos() {
+	const cachedPhotos = localStorage.getItem("photos");
+	if (cachedPhotos) {
+		return JSON.parse(cachedPhotos);
+	}
 	try {
 		const response = await fetch(apiUrl);
 		const data = await response.json();
-		return data.map((photo) => photo.urls.regular);
+		const photoUrls = data.map((photo) => photo.urls.regular);
+		localStorage.setItem("photos", JSON.stringify(photoUrls));
+		return photoUrls;
 	} catch (error) {
 		console.log(error);
 	}

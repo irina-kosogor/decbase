@@ -1,5 +1,5 @@
 import { stickNavbarToTop, showProgress } from "./modules/header";
-// import { createSlider } from "./modules/shop";
+import { createSlider } from "./modules/shop";
 import { setCurrentYear } from "./modules/footer-year";
 import { closeWindowAfterTimeout } from "./modules/modal-close-window";
 import { testimonialsSlider } from "./modules/testimonials-slider";
@@ -18,7 +18,7 @@ import { toggleHamburger } from "./modules/hamburger";
 // });
 
 window.addEventListener("DOMContentLoaded", () => {
-	// createSlider();
+	createSlider();
 	setCurrentYear();
 	closeWindowAfterTimeout();
 	formValidation();

@@ -7,14 +7,20 @@ export const blogNews = async () => {
 	const apiUrl = `https://gnews.io/api/v4/search?q=${keyWords}&sortby=publishedAt&lang=en&max=${count}&apikey=${apiKey}`;
 
 	async function getNews() {
+		const cachedNews = localStorage.getItem("articles");
+		if (cachedNews) {
+			return JSON.parse(cachedNews);
+		}
 		try {
 			const response = await fetch(apiUrl);
 			const data = await response.json();
+			localStorage.setItem("articles", JSON.stringify(data));
 			return data;
 		} catch (error) {
 			console.log(error);
 		}
 	}
+
 
 	async function createNewsCards() {
 		const news = await getNews();
