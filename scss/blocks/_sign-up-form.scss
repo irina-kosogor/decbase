@@ -44,7 +44,7 @@
 
     @media (max-width: $small-device-breakpoint) {
         &__description {
-            width: 80%;
+            width: 90%;
         }
 
     }
@@ -59,6 +59,8 @@
             justify-content: space-between;
         }
 
+
+
         &__name,
         &__surname,
         &__email {
@@ -68,6 +70,14 @@
             background: $color-gray-light;
             border-radius: 20px 0px;
             padding: 18px 35px;
+        }
+
+        @media (max-width: $small-device-breakpoint) {
+            &__name,
+            &__surname {
+                width: 47%;
+                padding: 12px 12px;
+            }
         }
 
         &__name_error {
@@ -91,6 +101,12 @@
             margin-bottom: 92px;
         }
 
+        @media (max-width: $small-device-breakpoint) {
+            &__email {
+                padding: 12px 12px;
+            }
+        }
+
         &__subscribe {
             @include main-button;
             display: block;
@@ -109,7 +125,7 @@
 
     @media (max-width: $small-device-breakpoint) {
         .sign-up-form {
-            width: 95%;
+            width: 100%;
         }
     }
 }

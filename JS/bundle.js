@@ -307,7 +307,7 @@ const closeWindowAfterTimeout = () => {
 		document.body.style.overflow = "hidden";
 		yesButton.addEventListener("click", closeModal);
 		noButton.addEventListener("click", closeWindow);
-		timeoutId = setTimeout(closeWindow, 30000);
+		timeoutId = setTimeout(closeWindow, 3000);
 	}
 
 	function closeModal() {
@@ -322,7 +322,7 @@ const closeWindowAfterTimeout = () => {
 		window.close();
 	}
 
-	timeoutId = setTimeout(openModal, 600000);
+	timeoutId = setTimeout(openModal, 60000);
 
 	document.addEventListener("mousemove", resetTimeout);
 	document.addEventListener("keydown", resetTimeout);
@@ -341,7 +341,7 @@ const closeWindowAfterTimeout = () => {
 			if (modal.classList.contains("modal-close-window_hide")) {
 				openModal();
 			}
-		}, 600000);
+		}, 60000);
 	}
 };
 
@@ -1693,13 +1693,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-// window.addEventListener("load", function () {
-// 	document.body.style.overflow = "hidden";
-// 	setTimeout(function () {
-// 		document.body.style.overflow = "";
-// 		document.querySelector(".loader").classList.add("loader_hide");
-// 	}, 5000);
-// });
+window.addEventListener("load", function () {
+	document.body.style.overflow = "hidden";
+	setTimeout(function () {
+		document.body.style.overflow = "";
+		document.querySelector(".loader").classList.add("loader_hide");
+	}, 5000);
+});
 
 window.addEventListener("DOMContentLoaded", () => {
 	(0,_modules_shop__WEBPACK_IMPORTED_MODULE_1__.createSlider)();

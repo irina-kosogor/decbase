@@ -6,6 +6,12 @@
         @include main-subtitle;
     }
 
+    @media (max-width: $small-device-breakpoint) {
+        &__subtitle {
+            text-align: center;
+        }
+    }
+
     &__title {
         @include main-title;
         margin-bottom: 44px;
@@ -14,6 +20,7 @@
     @media (max-width: $small-device-breakpoint) {
         &__title {
             margin-bottom: 24px;
+            text-align: center;
         }
     }
 }

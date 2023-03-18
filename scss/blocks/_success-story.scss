@@ -18,6 +18,14 @@
             right: -250px;
         }
     }
+    
+    @media (max-width: $medium-device-breakpoint) {
+        &__inner {
+            &:after {
+                display: none;
+            }
+        }
+    }
 
     &__content {
         width: 45%;
@@ -28,6 +36,10 @@
     @media (max-width: $small-device-breakpoint) {
         &__content {
             width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
     }
 

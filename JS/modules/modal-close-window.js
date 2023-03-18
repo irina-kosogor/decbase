@@ -13,7 +13,7 @@ export const closeWindowAfterTimeout = () => {
 		document.body.style.overflow = "hidden";
 		yesButton.addEventListener("click", closeModal);
 		noButton.addEventListener("click", closeWindow);
-		timeoutId = setTimeout(closeWindow, 30000);
+		timeoutId = setTimeout(closeWindow, 3000);
 	}
 
 	function closeModal() {
@@ -28,7 +28,7 @@ export const closeWindowAfterTimeout = () => {
 		window.close();
 	}
 
-	timeoutId = setTimeout(openModal, 600000);
+	timeoutId = setTimeout(openModal, 60000);
 
 	document.addEventListener("mousemove", resetTimeout);
 	document.addEventListener("keydown", resetTimeout);
@@ -47,6 +47,6 @@ export const closeWindowAfterTimeout = () => {
 			if (modal.classList.contains("modal-close-window_hide")) {
 				openModal();
 			}
-		}, 600000);
+		}, 60000);
 	}
 };
