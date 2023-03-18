@@ -57,6 +57,8 @@
 
 @media (max-width: $small-device-breakpoint) {
     .loader__wrapper {
+        position: relative;
+        top: -50px;
         span {
             font-size: $fs-96;
         }
