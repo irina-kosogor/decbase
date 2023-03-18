@@ -6,7 +6,7 @@ import { testimonialsSlider } from "./modules/testimonials-slider";
 import { formValidation } from "./modules/form-validation";
 import { blogNews } from "./modules/blog-news";
 import { services } from "./modules/services";
-import { toggleHamburger } from "./modules/hamburger";
+import { toggleHamburger } from "./modules/toggle-hamburger";
 
 
 window.addEventListener("load", function () {

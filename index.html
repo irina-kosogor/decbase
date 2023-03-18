@@ -35,7 +35,9 @@
                         </ul>
                     </nav>
                     <div class="authorize">
-                        <a href="#sign-up"><button class="authorize__btn">Sign Up</button></a>
+                        <form>
+                            <button class="authorize__btn" formaction="#sign-up">Sign Up</button>
+                        </form>
                     </div>
                     <nav class="hamburger">
                         <button class="hamburger__btn"></button>
@@ -44,11 +46,12 @@
             </div>
         </div>
         <div class="header-progress-container">
-            <div class="header-progress-bar" id="progress-bar""></div>
+            <div class="header-progress-bar" id="progress-bar"></div>
         </div>
     </div>
 
     <section class="mobile-menu">
+        <h2 style="display: none">Mobile menu</h2>
         <div class="mobile-menu__block">
             <div class="mobile-menu__close">
                 <svg width="20" height="20" viewBox="0 0 29 30" fill="" xmlns="http://www.w3.org/2000/svg">
@@ -221,6 +224,7 @@
         </section>
 
         <section class="blog-news" id="blog">
+            <h2 style="display: none">blog-news</h2>
             <div class="container">
                 <div class="blog-news__subtitle">LATEST NEWS</div>
                 <div class="blog-news__title">From Our Blog</div>
@@ -251,15 +255,15 @@
                 <form action="#" id="sign-up-form" class="sign-up-form">
                     <div class="sign-up-form__wrapper">
                         <input id="sign-up-name" class="sign-up-form__name" type="text"
-                            placeholder="Enter your name....." />
+                            placeholder="Enter your name.....">
                         <input id="sign-up-surname" class="sign-up-form__surname" type="text"
-                            placeholder="Enter your surname....." />
+                            placeholder="Enter your surname.....">
                     </div>
                     <div class="sign-up-form__error sign-up-form__error-name"></div>
                     <input id="sign-up-email" class="sign-up-form__email" type="email"
-                        placeholder="Enter your e-mail....." />
+                        placeholder="Enter your e-mail.....">
                     <div class="sign-up-form__error sign-up-form__error-email"></div>
-                    <input id="sign-up-subscribe" class="sign-up-form__subscribe" type="submit" value="SUBSCRIBE" />
+                    <input id="sign-up-subscribe" class="sign-up-form__subscribe" type="submit" value="SUBSCRIBE">
                 </form>
                 <div class="firework">
                     <div class="before"></div>

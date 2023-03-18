@@ -210,38 +210,6 @@ const formValidation = () => {
 
 /***/ }),
 
-/***/ "./js/modules/hamburger.js":
-/*!*********************************!*\
-  !*** ./js/modules/hamburger.js ***!
-  \*********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "toggleHamburger": () => (/* binding */ toggleHamburger)
-/* harmony export */ });
-const toggleHamburger = () => {
-	const hamburger = document.querySelector(".hamburger");
-	const menu = document.querySelector(".mobile-menu");
-	const closeElem = document.querySelector(".mobile-menu__close");
-	const linksWrapper = document.querySelector(".mobile-menu__list");
-
-	hamburger.addEventListener("click", () => {
-		menu.classList.add("active");
-	});
-
-	closeElem.addEventListener("click", () => {
-		menu.classList.remove("active");
-	});
-
-	linksWrapper.addEventListener("click", () => {
-		menu.classList.remove("active");
-	})
-};
-
-
-/***/ }),
-
 /***/ "./js/modules/header.js":
 /*!******************************!*\
   !*** ./js/modules/header.js ***!
@@ -659,6 +627,38 @@ const testimonialsSlider = () => {
 		shownCards = window.innerWidth <= 1199.98 ? 1 : 2;
 		showCards();
 	});
+};
+
+
+/***/ }),
+
+/***/ "./js/modules/toggle-hamburger.js":
+/*!****************************************!*\
+  !*** ./js/modules/toggle-hamburger.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "toggleHamburger": () => (/* binding */ toggleHamburger)
+/* harmony export */ });
+const toggleHamburger = () => {
+	const hamburger = document.querySelector(".hamburger");
+	const menu = document.querySelector(".mobile-menu");
+	const closeElem = document.querySelector(".mobile-menu__close");
+	const linksWrapper = document.querySelector(".mobile-menu__list");
+
+	hamburger.addEventListener("click", () => {
+		menu.classList.add("active");
+	});
+
+	closeElem.addEventListener("click", () => {
+		menu.classList.remove("active");
+	});
+
+	linksWrapper.addEventListener("click", () => {
+		menu.classList.remove("active");
+	})
 };
 
 
@@ -1681,7 +1681,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_form_validation__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/form-validation */ "./js/modules/form-validation.js");
 /* harmony import */ var _modules_blog_news__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/blog-news */ "./js/modules/blog-news.js");
 /* harmony import */ var _modules_services__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/services */ "./js/modules/services.js");
-/* harmony import */ var _modules_hamburger__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/hamburger */ "./js/modules/hamburger.js");
+/* harmony import */ var _modules_toggle_hamburger__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/toggle-hamburger */ "./js/modules/toggle-hamburger.js");
 
 
 
@@ -1709,7 +1709,7 @@ window.addEventListener("DOMContentLoaded", () => {
 	(0,_modules_testimonials_slider__WEBPACK_IMPORTED_MODULE_4__.testimonialsSlider)();
 	(0,_modules_blog_news__WEBPACK_IMPORTED_MODULE_6__.blogNews)();
 	(0,_modules_services__WEBPACK_IMPORTED_MODULE_7__.services)();
-	(0,_modules_hamburger__WEBPACK_IMPORTED_MODULE_8__.toggleHamburger)();
+	(0,_modules_toggle_hamburger__WEBPACK_IMPORTED_MODULE_8__.toggleHamburger)();
 });
 
 window.addEventListener("scroll", () => {
