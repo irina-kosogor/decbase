@@ -38,6 +38,7 @@ It is important to note that an API key is required to access the gnews.io publi
 The sign-in form on the website is implemented with validation rules to ensure the correctness of the data entered by the user. The validation rules are as follows:
 - The name and surname fields accept only Latin letters, with the first letter capitalized. The presence of digits or spaces is not allowed.
 - The email field follows the general validation rules for email addresses.
+
 After the user fills in the form correctly, the data is stored in the local storage of the user's browser.
 If the user submits the form with incorrect data, the form fields with errors are highlighted, and the user is provided with information on where the error occurred with the corresponding message.
 If the name "Irina" is entered in the name field, a welcoming animation for five seconds notifies the user that there is a 20% (as 120% seems incredible) discount on orders. The system date is used to determine the current date.
