@@ -68,7 +68,7 @@
             z-index: 2;
 
             .blog-news__item-img {
-                width: 100%;
+                width: 90%;
                 height: 350px;
             }
 
@@ -111,7 +111,7 @@
                 border-radius: initial;
                 box-shadow: none;
                 .blog-news__item-img {
-                    width: 100%;
+                    width: 90%;
                 }
             }
         }
@@ -169,13 +169,13 @@
 
     @media (max-width: $medium-device-breakpoint) {
         &__item-img {
-            width: 100%;
+            width: 90%;
         }
     }
 
     @media (max-width: $small-device-breakpoint) {
         &__item-img {
-            width: 100%;
+            width: 90%;
         }
     }
 

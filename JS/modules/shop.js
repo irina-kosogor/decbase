@@ -2,7 +2,7 @@ const sliderContainer = document.querySelector(".shop__slider");
 const btnPrevious = document.querySelector(".shop__btn_previous");
 const btnNext = document.querySelector(".shop__btn_next");
 
-const count = 5;
+const count = 10;
 const collection = 9475907;
 const apiKey = "9X9s_kjLwTgBifHuKGDg1bUXJHkcGi4MFOfBCG2GZMY";
 const apiUrl = `https://api.unsplash.com/photos/random?collections=${collection}&count=${count}&client_id=${apiKey}`;

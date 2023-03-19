@@ -32,6 +32,7 @@ export const closeWindowAfterTimeout = () => {
 
 	document.addEventListener("mousemove", resetTimeout);
 	document.addEventListener("keydown", resetTimeout);
+	document.addEventListener("scroll", resetTimeout);
 	document.addEventListener("keydown", (event) => {
 		if (
 			event.code === "Escape" &&

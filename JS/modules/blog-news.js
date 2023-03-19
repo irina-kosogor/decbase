@@ -2,7 +2,7 @@ export const blogNews = async () => {
 	const latestNewsSection = document.querySelector("#blog");
 	const latestNewContainer = document.querySelector(".blog-news__items");
 	const count = 4;
-	const keyWords = "interior designs";
+	const keyWords = "designs interior";
 	const apiKey = "533370f06f8d1a8afb6e96be34bc179a";
 	const apiUrl = `https://gnews.io/api/v4/search?q=${keyWords}&sortby=relevancyt&lang=en&max=${count}&apikey=${apiKey}`;
 

@@ -1,3 +1,4 @@
+import { loader } from "./modules/loader";
 import { stickNavbarToTop, showProgress } from "./modules/header";
 import { createSlider } from "./modules/shop";
 import { setCurrentYear } from "./modules/footer-year";
@@ -8,16 +9,8 @@ import { blogNews } from "./modules/blog-news";
 import { services } from "./modules/services";
 import { toggleHamburger } from "./modules/toggle-hamburger";
 
-
-// window.addEventListener("load", function () {
-// 	document.body.style.overflow = "hidden";
-// 	setTimeout(function () {
-// 		document.body.style.overflow = "";
-// 		document.querySelector(".loader").classList.add("loader_hide");
-// 	}, 5000);
-// });
-
 window.addEventListener("DOMContentLoaded", () => {
+	loader();
 	createSlider();
 	setCurrentYear();
 	closeWindowAfterTimeout();
@@ -32,5 +25,3 @@ window.addEventListener("scroll", () => {
 	stickNavbarToTop();
 	showProgress();
 });
-
-

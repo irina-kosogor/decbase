@@ -16,7 +16,7 @@ const blogNews = async () => {
 	const latestNewsSection = document.querySelector("#blog");
 	const latestNewContainer = document.querySelector(".blog-news__items");
 	const count = 4;
-	const keyWords = "interior designs";
+	const keyWords = "designs interior";
 	const apiKey = "533370f06f8d1a8afb6e96be34bc179a";
 	const apiUrl = `https://gnews.io/api/v4/search?q=${keyWords}&sortby=relevancyt&lang=en&max=${count}&apikey=${apiKey}`;
 
@@ -250,6 +250,26 @@ function showProgress() {
 
 /***/ }),
 
+/***/ "./js/modules/loader.js":
+/*!******************************!*\
+  !*** ./js/modules/loader.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "loader": () => (/* binding */ loader)
+/* harmony export */ });
+const loader = () => {
+    document.body.style.overflow = "hidden";
+	setTimeout(function () {
+		document.body.style.overflow = "";
+		document.querySelector(".loader").classList.add("loader_hide");
+	}, 5000);
+}
+
+/***/ }),
+
 /***/ "./js/modules/modal-close-window.js":
 /*!******************************************!*\
   !*** ./js/modules/modal-close-window.js ***!
@@ -294,6 +314,7 @@ const closeWindowAfterTimeout = () => {
 
 	document.addEventListener("mousemove", resetTimeout);
 	document.addEventListener("keydown", resetTimeout);
+	document.addEventListener("scroll", resetTimeout);
 	document.addEventListener("keydown", (event) => {
 		if (
 			event.code === "Escape" &&
@@ -464,7 +485,7 @@ const sliderContainer = document.querySelector(".shop__slider");
 const btnPrevious = document.querySelector(".shop__btn_previous");
 const btnNext = document.querySelector(".shop__btn_next");
 
-const count = 5;
+const count = 10;
 const collection = 9475907;
 const apiKey = "9X9s_kjLwTgBifHuKGDg1bUXJHkcGi4MFOfBCG2GZMY";
 const apiUrl = `https://api.unsplash.com/photos/random?collections=${collection}&count=${count}&client_id=${apiKey}`;
@@ -1673,15 +1694,16 @@ var __webpack_exports__ = {};
   !*** ./js/script.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/header */ "./js/modules/header.js");
-/* harmony import */ var _modules_shop__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/shop */ "./js/modules/shop.js");
-/* harmony import */ var _modules_footer_year__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/footer-year */ "./js/modules/footer-year.js");
-/* harmony import */ var _modules_modal_close_window__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/modal-close-window */ "./js/modules/modal-close-window.js");
-/* harmony import */ var _modules_testimonials_slider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/testimonials-slider */ "./js/modules/testimonials-slider.js");
-/* harmony import */ var _modules_form_validation__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/form-validation */ "./js/modules/form-validation.js");
-/* harmony import */ var _modules_blog_news__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/blog-news */ "./js/modules/blog-news.js");
-/* harmony import */ var _modules_services__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/services */ "./js/modules/services.js");
-/* harmony import */ var _modules_toggle_hamburger__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/toggle-hamburger */ "./js/modules/toggle-hamburger.js");
+/* harmony import */ var _modules_loader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/loader */ "./js/modules/loader.js");
+/* harmony import */ var _modules_header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/header */ "./js/modules/header.js");
+/* harmony import */ var _modules_shop__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/shop */ "./js/modules/shop.js");
+/* harmony import */ var _modules_footer_year__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/footer-year */ "./js/modules/footer-year.js");
+/* harmony import */ var _modules_modal_close_window__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/modal-close-window */ "./js/modules/modal-close-window.js");
+/* harmony import */ var _modules_testimonials_slider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/testimonials-slider */ "./js/modules/testimonials-slider.js");
+/* harmony import */ var _modules_form_validation__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/form-validation */ "./js/modules/form-validation.js");
+/* harmony import */ var _modules_blog_news__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/blog-news */ "./js/modules/blog-news.js");
+/* harmony import */ var _modules_services__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/services */ "./js/modules/services.js");
+/* harmony import */ var _modules_toggle_hamburger__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/toggle-hamburger */ "./js/modules/toggle-hamburger.js");
 
 
 
@@ -1692,32 +1714,23 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-// window.addEventListener("load", function () {
-// 	document.body.style.overflow = "hidden";
-// 	setTimeout(function () {
-// 		document.body.style.overflow = "";
-// 		document.querySelector(".loader").classList.add("loader_hide");
-// 	}, 5000);
-// });
 
 window.addEventListener("DOMContentLoaded", () => {
-	(0,_modules_shop__WEBPACK_IMPORTED_MODULE_1__.createSlider)();
-	(0,_modules_footer_year__WEBPACK_IMPORTED_MODULE_2__.setCurrentYear)();
-	(0,_modules_modal_close_window__WEBPACK_IMPORTED_MODULE_3__.closeWindowAfterTimeout)();
-	(0,_modules_form_validation__WEBPACK_IMPORTED_MODULE_5__.formValidation)();
-	(0,_modules_testimonials_slider__WEBPACK_IMPORTED_MODULE_4__.testimonialsSlider)();
-	(0,_modules_blog_news__WEBPACK_IMPORTED_MODULE_6__.blogNews)();
-	(0,_modules_services__WEBPACK_IMPORTED_MODULE_7__.services)();
-	(0,_modules_toggle_hamburger__WEBPACK_IMPORTED_MODULE_8__.toggleHamburger)();
+	(0,_modules_loader__WEBPACK_IMPORTED_MODULE_0__.loader)();
+	(0,_modules_shop__WEBPACK_IMPORTED_MODULE_2__.createSlider)();
+	(0,_modules_footer_year__WEBPACK_IMPORTED_MODULE_3__.setCurrentYear)();
+	(0,_modules_modal_close_window__WEBPACK_IMPORTED_MODULE_4__.closeWindowAfterTimeout)();
+	(0,_modules_form_validation__WEBPACK_IMPORTED_MODULE_6__.formValidation)();
+	(0,_modules_testimonials_slider__WEBPACK_IMPORTED_MODULE_5__.testimonialsSlider)();
+	(0,_modules_blog_news__WEBPACK_IMPORTED_MODULE_7__.blogNews)();
+	(0,_modules_services__WEBPACK_IMPORTED_MODULE_8__.services)();
+	(0,_modules_toggle_hamburger__WEBPACK_IMPORTED_MODULE_9__.toggleHamburger)();
 });
 
 window.addEventListener("scroll", () => {
-	(0,_modules_header__WEBPACK_IMPORTED_MODULE_0__.stickNavbarToTop)();
-	(0,_modules_header__WEBPACK_IMPORTED_MODULE_0__.showProgress)();
+	(0,_modules_header__WEBPACK_IMPORTED_MODULE_1__.stickNavbarToTop)();
+	(0,_modules_header__WEBPACK_IMPORTED_MODULE_1__.showProgress)();
 });
-
-
 
 })();
 
