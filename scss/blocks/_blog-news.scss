@@ -35,13 +35,13 @@
         display: grid;
         grid-template-columns: repeat(2, 48%);
         grid-template-rows: auto;
-        gap: 4%;
+        column-gap: 4%;
     }
 
     @media (max-width: $medium-device-breakpoint) {
         &__items {
             grid-template-columns: 1fr;
-            gap: 2%;
+            column-gap: 4%;;
         }
     }
 
@@ -57,17 +57,17 @@
         }
     }
 
-    @media (max-width: $large-device-breakpoint) {
-        &__item-wrapper {
-            min-height: 650px;
-        }
-    }
+    // @media (max-width: $large-device-breakpoint) {
+    //     &__item-wrapper {
+    //         min-height: 650px;
+    //     }
+    // }
 
-    @media (max-width: $medium-device-breakpoint) {
-        &__item-wrapper {
-            min-height: 700px;
-        }
-    }
+    // @media (max-width: $medium-device-breakpoint) {
+    //     &__item-wrapper {
+    //         min-height: 650px;
+    //     }
+    // }
 
     @media (max-width: $x-small-device-breakpoint) {
         &__item-wrapper {
@@ -86,7 +86,7 @@
             z-index: 2;
 
             .blog-news__item-img {
-                width: 600px;
+                width: 100%;
                 height: 420px;
             }
 
@@ -105,7 +105,7 @@
                 padding-right: 20px;
 
                 .blog-news__item-img {
-                    width: 480px;
+                    width: 100%;
                     height: 340px;
                 }
             }
@@ -116,7 +116,7 @@
         &__item {
             &:hover {
                 .blog-news__item-img {
-                    width: 380px;
+                    width: 100%;
                     height: 300px;
                 }
             }
@@ -125,12 +125,7 @@
 
     @media (max-width: $medium-device-breakpoint) {
         &__item {
-            &:hover {
-                .blog-news__item-img {
-                    width: 550px;
-                    height: 350px;
-                }
-            }
+            pointer-events: none;
         }
     }
 
@@ -139,27 +134,13 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            pointer-events: none;
-
-            &:hover {
-                .blog-news__item-img {
-                    width: 40px;
-                    height: 350px;
-                }
-            }
+            margin-bottom: 45px;
         }
     }
 
-    @media (max-width: $x-small-device-breakpoint) {
-        &__item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-    }
 
     &__item-img {
-        width: 554px;
+        width: 80%;
         height: 387px;
         position: relative;
         z-index: 1;
@@ -187,36 +168,32 @@
 
     @media (max-width: $x-large-device-breakpoint) {
         &__item-img {
-            width: 520px;
-            height: 340px;
+            width: 100%;
+            height: 350px;
         }
     }
 
     @media (max-width: $large-device-breakpoint) {
         &__item-img {
-            width: 420px;
-            height: 300px;
+            width: 100%;
         }
     }
 
     @media (max-width: $medium-device-breakpoint) {
         &__item-img {
-            width: 450px;
-            height: 350px;
+            width: 100%;
         }
     }
 
     @media (max-width: $small-device-breakpoint) {
         &__item-img {
-            width: 450px;
-            height: 350px;
+            width: 100%;
         }
     }
 
     @media (max-width: $x-small-device-breakpoint) {
         &__item-img {
-            width: 250px;
-            height: 250px;
+            width: 90%;
         }
     }
 
@@ -227,6 +204,16 @@
         line-height: 30px;
         color: $color-gray-dark;
         margin-bottom: 17px;
+    }
+
+    
+    @media (max-width: $medium-device-breakpoint) {
+        &__item-title {
+            height: auto;
+            text-overflow: initial;
+            overflow: visible;
+            display: block;
+        }
     }
 
     &__item-description {
@@ -243,7 +230,7 @@
         -webkit-box-orient: vertical;
     }
 
-    @media (max-width: $x-small-device-breakpoint) {
+    @media (max-width: $medium-device-breakpoint) {
         &__item-description {
             height: auto;
             text-overflow: initial;
@@ -264,6 +251,6 @@
 
 @media (max-width: $medium-device-breakpoint) {
     .blog-news {
-        padding-bottom: 250px;
+        padding-bottom: 100px;
     }
 }

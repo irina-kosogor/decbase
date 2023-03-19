@@ -1693,13 +1693,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-window.addEventListener("load", function () {
-	document.body.style.overflow = "hidden";
-	setTimeout(function () {
-		document.body.style.overflow = "";
-		document.querySelector(".loader").classList.add("loader_hide");
-	}, 5000);
-});
+// window.addEventListener("load", function () {
+// 	document.body.style.overflow = "hidden";
+// 	setTimeout(function () {
+// 		document.body.style.overflow = "";
+// 		document.querySelector(".loader").classList.add("loader_hide");
+// 	}, 5000);
+// });
 
 window.addEventListener("DOMContentLoaded", () => {
 	(0,_modules_shop__WEBPACK_IMPORTED_MODULE_1__.createSlider)();
