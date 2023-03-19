@@ -1,5 +1,5 @@
 .testimonials {
-    padding: 130px 0 245px 0;
+    padding: 143px 0 245px 0;
 
     &__header-wrapper {
         position: relative;
@@ -150,8 +150,8 @@
     }
 }
 
-@media (max-width: $small-device-breakpoint) {
+@media (max-width: $medium-device-breakpoint) {
     .testimonials {
-        padding: 60px 0 85px 0;
+        padding: 90px 0 85px 0;
     }
 }

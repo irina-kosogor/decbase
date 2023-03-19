@@ -98,14 +98,13 @@
 
 @media (max-width: $large-device-breakpoint) {
     .about-us {
-        padding-top: 80px;
+        padding-top:90px;
         background: url('../images/about_us_decore.svg') bottom 80px left 150px no-repeat;
     }
 }
 
 @media (max-width: $small-device-breakpoint) {
     .about-us {
-        padding-top: 80px;
         background: url('../images/about_us_decore.svg') bottom 40px right no-repeat;
     }
 }

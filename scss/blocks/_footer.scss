@@ -133,11 +133,16 @@
 
     @media (max-width: $small-device-breakpoint) {
         &__links {
-            font-size: $fs-14;
             width: 100%;
             justify-content: center;
             display: flex;
             flex-direction: row;
+        }
+    }
+
+    @media (max-width: $x-small-device-breakpoint) {
+        &__links {
+            font-size: $fs-14;
         }
     }
 
@@ -220,10 +225,15 @@
 
     @media (max-width: $medium-device-breakpoint) {
         &__list {
-            font-size: $fs-14;
             text-align: center;
             margin-bottom: 12px;
             line-height: 25px;
+        }
+    }
+
+    @media (max-width: $x-small-device-breakpoint) {
+        &__list {
+            font-size: $fs-14;
         }
     }
 }

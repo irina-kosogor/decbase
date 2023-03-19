@@ -1,5 +1,5 @@
 .our-services {
-    padding: 143px 0 225px 0;
+    padding: 143px 0 125px 0;
     background: url('../images/main_decore.svg') bottom right no-repeat;
 
     &__subtitle {
@@ -27,7 +27,7 @@
 
 @media (max-width: $large-device-breakpoint) {
     .our-services {
-        padding-top: 50px;
+        padding-top: 90px;
     }
 }
 
